@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>החנות - חיים רפאל - המעדניה בלוינסקי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#B5122E; --red-dark:#8E0E24; --cream:#FAF5EC; --paper:#F3EBDD;
+  --ink:#221D18; --ink-soft:#5A5248; --gold:#C89B3C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Frank Ruhl Libre',serif}
+
+.topstrip{background:var(--ink);color:#E8DFD0;font-size:.82rem;text-align:center;padding:7px 12px}
+.topstrip b{color:var(--gold)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(250,245,236,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(34,29,24,.09)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0;gap:20px}
+.logo{line-height:1.05}
+.logo .name{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.5rem;color:var(--red);display:block}
+.logo .tag{font-size:.66rem;letter-spacing:.32em;color:var(--ink-soft)}
+.search{flex:1;max-width:420px;position:relative}
+.search input{width:100%;padding:11px 42px 11px 16px;border:1.5px solid rgba(34,29,24,.15);border-radius:99px;background:#fff;font-family:'Heebo';font-size:.95rem;outline:none;transition:border .2s}
+.search input:focus{border-color:var(--red)}
+.search .ic{position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:.5}
+.cart-btn{display:flex;align-items:center;gap:10px;background:var(--red);color:#fff;border-radius:99px;padding:10px 22px;font-weight:600;cursor:pointer;transition:background .2s;border:none;font-size:.95rem}
+.cart-btn:hover{background:var(--red-dark)}
+.cart-btn .n{background:#fff;color:var(--red);border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:.75rem;font-weight:800}
+
+/* Page head */
+.page-head{padding:44px 0 8px;text-align:center}
+.page-head h1{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:900}
+.page-head p{color:var(--ink-soft);margin-top:6px}
+.rule{width:56px;height:3px;background:var(--gold);margin:16px auto 0}
+
+/* Category pills */
+.pills-bar{position:sticky;top:66px;z-index:40;background:rgba(250,245,236,.96);backdrop-filter:blur(8px);padding:18px 0;border-bottom:1px solid rgba(34,29,24,.07)}
+.pills{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pill{flex-shrink:0;padding:9px 20px;border-radius:99px;border:1.5px solid rgba(34,29,24,.18);background:#fff;font-family:'Heebo';font-size:.9rem;font-weight:500;cursor:pointer;transition:all .18s;color:var(--ink)}
+.pill:hover{border-color:var(--red);color:var(--red)}
+.pill.on{background:var(--red);border-color:var(--red);color:#fff;font-weight:600}
+
+/* Grid */
+.count{padding:26px 0 6px;color:var(--ink-soft);font-size:.88rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:12px 0 70px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:440px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 5px 18px rgba(34,29,24,.07);transition:transform .22s,box-shadow .22s;display:flex;flex-direction:column;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(34,29,24,.15)}
+.card .ph{aspect-ratio:1/0.9;overflow:hidden;background:var(--paper)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover .ph img{transform:scale(1.05)}
+.badge{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--ink);font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:99px;z-index:2}
+.card .in{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.card h3{font-family:'Heebo';font-size:.98rem;font-weight:600;line-height:1.35;min-height:2.6em}
+.card .sub{font-size:.78rem;color:var(--ink-soft);margin-top:2px;min-height:1.1em}
+.card .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px}
+.price{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:1.18rem;color:var(--red)}
+.add{height:36px;padding:0 16px;border-radius:99px;background:var(--cream);border:1.5px solid var(--red);color:var(--red);font-family:'Heebo';font-size:.85rem;font-weight:600;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:6px}
+.add:hover{background:var(--red);color:#fff}
+.empty{padding:60px 0;text-align:center;color:var(--ink-soft)}
+
+footer{background:var(--ink);color:#B8AC99;padding:28px 0;text-align:center;font-size:.85rem}
+footer b{color:var(--gold);font-weight:600}
+.note{margin-top:6px;font-size:.78rem;opacity:.7}
+
+.toast{position:fixed;bottom:26px;right:50%;transform:translate(50%,20px);background:var(--ink);color:#fff;padding:13px 28px;border-radius:99px;font-size:.92rem;opacity:0;transition:all .3s;pointer-events:none;z-index:99}
+.toast.show{opacity:1;transform:translate(50%,0)}
+</style>
+</head>
+<body>
+
+<div class="topstrip">משלוחים בתל אביב עד הבית · <b>לוינסקי 36, תל אביב</b> · 03-6826147</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">
+      <span class="name">חיים רפאל</span>
+      <span class="tag">המעדניה בלוינסקי · מאז 1958</span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="מה מחפשים? גבינה, סלמון, זיתים...">
+      <span class="ic">🔍</span>
+    </div>
+    <button class="cart-btn"><span class="n" id="cartN">0</span> הסל שלי</button>
+  </div>
+</header>
+
+<div class="page-head wrap">
+  <h1>החנות של חיים רפאל</h1>
+  <p>כל מה שעל הדלפק בלוינסקי - עד הבית שלכם</p>
+  <div class="rule"></div>
+</div>
+
+<div class="pills-bar">
+  <div class="wrap"><div class="pills" id="pills"></div></div>
+</div>
+
+<div class="wrap">
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>
+  <div>חיים רפאל · המעדניה בלוינסקי · <b>מאז 1958</b> · לוינסקי 36, תל אביב</div>
+  <div class="note">הדמיית עיצוב - הצעה לשדרוג האתר · המחירים והמוצרים נמשכו מהאתר הקיים</div>
+</footer>
+
+<div class="toast" id="toast">נוסף לסל ✓</div>
+
+<script>
+const PRODUCTS = [{"cat": "גבינות", "title": "בולגרית המאירי", "sub": "כ-400 גרם", "price": "55", "img": "https://media.getmood.io/warehouse/dynamic/263129.jpg"}, {"cat": "גבינות", "title": "פרמז'נו רג'יאנו מיושן 30 חודשים", "sub": "", "price": "30", "img": "https://media.getmood.io/warehouse/dynamic/264313.jpg"}, {"cat": "גבינות", "title": "בורסאן צרפתית עם שום", "sub": "", "price": "23", "img": "https://media.getmood.io/warehouse/dynamic/259935.jpg"}, {"cat": "גבינות", "title": "בורסאן צרפתית עם פלפל", "sub": "", "price": "23", "img": "https://media.getmood.io/warehouse/dynamic/259937.jpg"}, {"cat": "גבינות", "title": "גבינה גרוזינית", "sub": "", "price": "8", "img": "https://media.getmood.io/warehouse/dynamic/259938.jpg"}, {"cat": "גבינות", "title": "צפתית 4 אחוז שומן", "sub": "250 גרם", "price": "22", "img": "https://media.getmood.io/warehouse/dynamic/264342.jpg"}, {"cat": "גבינות", "title": "חמאה צרפתית לגל מלח אטלנטי", "sub": "250 גרם", "price": "28", "img": "https://media.getmood.io/warehouse/dynamic/259949.jpg"}, {"cat": "גבינות", "title": "חמאה צרפתית לגל מלוחה", "sub": "250 גרם", "price": "28", "img": "https://media.getmood.io/warehouse/dynamic/259951.jpg"}, {"cat": "מגשי אירוח", "title": "מגש אירוח עם מגוון גבינות מהעולם (1 ק\"ג)", "sub": "", "price": "250", "img": "https://media.getmood.io/warehouse/dynamic/263137.jpeg"}, {"cat": "מגשי אירוח", "title": "הרמת כוסית חגיגית", "sub": "ל15 אנשים", "price": "1400", "img": "https://media.getmood.io/warehouse/dynamic/272666.jpeg"}, {"cat": "מגשי אירוח", "title": "מגש אירוח מגוון דגים מלוחים (1 ק\"ג)", "sub": "", "price": "250", "img": "https://media.getmood.io/warehouse/dynamic/651153.jpeg"}, {"cat": "מגשי אירוח", "title": "מגש אירוח סלמון מעושן ומטיאס הולנדי (1 ק\"ג)", "sub": "", "price": "250", "img": "https://media.getmood.io/warehouse/dynamic/651154.jpeg"}, {"cat": "מגשי אירוח", "title": "מגש אירוח לביבות תרד עם צזיקי (20 יחידות)", "sub": "", "price": "220", "img": "https://media.getmood.io/warehouse/dynamic/334088.jpg"}, {"cat": "מגשי אירוח", "title": "מגש אירוח לביבות תפו\"א עם צזיקי (20 יחידות)", "sub": "", "price": "220", "img": "https://media.getmood.io/warehouse/dynamic/334089.jpg"}, {"cat": "מגשי אירוח", "title": "מגש אירוח לביבות כרישה עם צזיקי (20 יחידות)", "sub": "", "price": "220", "img": "https://media.getmood.io/warehouse/dynamic/263109.jpg"}, {"cat": "מגשי אירוח", "title": "מגש אירוח ממרחים (1.4 ק\"ג)", "sub": "", "price": "180", "img": "https://media.getmood.io/warehouse/dynamic/263143.jpeg"}, {"cat": "מאפים ופסטות", "title": "מאפה פילו תרד יווני", "sub": "750 גרם", "price": "40", "img": "https://media.getmood.io/warehouse/dynamic/707685.jpeg"}, {"cat": "מאפים ופסטות", "title": "קיש ברוקולי וקישוא", "sub": "", "price": "55", "img": "https://media.getmood.io/warehouse/dynamic/260006.jpg"}, {"cat": "מאפים ופסטות", "title": "קיש תרד ומוצרלה", "sub": "", "price": "55", "img": "https://media.getmood.io/warehouse/dynamic/260005.jpg"}, {"cat": "מאפים ופסטות", "title": "קיש גבינות", "sub": "", "price": "55", "img": "https://media.getmood.io/warehouse/dynamic/260012.jpg"}, {"cat": "מאפים ופסטות", "title": "קיש פטריות ושקדים", "sub": "", "price": "55", "img": "https://media.getmood.io/warehouse/dynamic/260010.jpg"}, {"cat": "מאפים ופסטות", "title": "קיש בטטה ושום", "sub": "", "price": "55", "img": "https://media.getmood.io/warehouse/dynamic/260007.jpg"}, {"cat": "מאפים ופסטות", "title": "לביבות פראסה / כרישה (8 יחידות)", "sub": "", "price": "72", "img": "https://media.getmood.io/warehouse/dynamic/264645.jpeg"}, {"cat": "מאפים ופסטות", "title": "קיש בצל וצנובר", "sub": "", "price": "55", "img": "https://media.getmood.io/warehouse/dynamic/260008.jpg"}, {"cat": "דגים", "title": "דג פלמידה שלם מעושן", "sub": "", "price": "50", "img": "https://media.getmood.io/warehouse/dynamic/264391.jpg"}, {"cat": "דגים", "title": "גפילטע פיש (6 יחידות)", "sub": "", "price": "48", "img": "https://media.getmood.io/warehouse/dynamic/264395.jpg"}, {"cat": "דגים", "title": "פלמידה מעושנת מפולטת וחתוכה", "sub": "", "price": "50", "img": "https://media.getmood.io/warehouse/dynamic/259898.jpg"}, {"cat": "דגים", "title": "חצי פלמידה מעושנת מפולטת וחתוכה", "sub": "", "price": "26", "img": "https://media.getmood.io/warehouse/dynamic/259899.jpg"}, {"cat": "דגים", "title": "פילה מטיאס הולנדי (4 יחידות)", "sub": "", "price": "48", "img": "https://media.getmood.io/warehouse/dynamic/264394.jpg"}, {"cat": "דגים", "title": "מטיאס בבצל ירוק", "sub": "350 גרם", "price": "49", "img": "https://media.getmood.io/warehouse/dynamic/263156.jpg"}, {"cat": "דגים", "title": "מטיאס כבוש בשמנת", "sub": "350 גרם", "price": "49", "img": "https://media.getmood.io/warehouse/dynamic/263154.jpg"}, {"cat": "דגים", "title": "לקרדה טורקית", "sub": "200 גרם", "price": "120", "img": "https://media.getmood.io/warehouse/dynamic/259897.jpg"}, {"cat": "סלטים וממרחים", "title": "סקורדליה", "sub": "550 גרם", "price": "44", "img": "https://media.getmood.io/warehouse/dynamic/259838.jpg"}, {"cat": "סלטים וממרחים", "title": "חציל קלוי עם המאירי", "sub": "550 גרם", "price": "44", "img": "https://media.getmood.io/warehouse/dynamic/259806.jpg"}, {"cat": "סלטים וממרחים", "title": "כבד קצוץ", "sub": "370 גרם", "price": "45", "img": "https://media.getmood.io/warehouse/dynamic/318093.jpg"}, {"cat": "סלטים וממרחים", "title": "חציל סביח", "sub": "250  גרם", "price": "25", "img": "https://media.getmood.io/warehouse/dynamic/263152.jpeg"}, {"cat": "סלטים וממרחים", "title": "חציל משאוויה", "sub": "550 גרם", "price": "33", "img": "https://media.getmood.io/warehouse/dynamic/263006.jpg"}, {"cat": "סלטים וממרחים", "title": "חציל בטחינה", "sub": "550 גרם", "price": "33", "img": "https://media.getmood.io/warehouse/dynamic/259813.jpg"}, {"cat": "סלטים וממרחים", "title": "ארטישוק שלם", "sub": "300 גרם", "price": "39", "img": "https://media.getmood.io/warehouse/dynamic/259856.jpg"}, {"cat": "סלטים וממרחים", "title": "חציל טבעי", "sub": "550 גרם", "price": "33", "img": "https://media.getmood.io/warehouse/dynamic/259826.jpg"}, {"cat": "זיתים וחמוצים", "title": "מנזולינו", "sub": "450 גרם", "price": "27", "img": "https://media.getmood.io/warehouse/dynamic/259953.jpg"}, {"cat": "זיתים וחמוצים", "title": "סנטה יווני(זית ירוק ענק שלם]", "sub": "450 גרם", "price": "27", "img": "https://media.getmood.io/warehouse/dynamic/259958.jpg"}, {"cat": "זיתים וחמוצים", "title": "מלפפון חמוץ ביתי", "sub": "400 גרם", "price": "24", "img": "https://media.getmood.io/warehouse/dynamic/264404.jpg"}, {"cat": "זיתים וחמוצים", "title": "פלפל סודני חריף", "sub": "300 גרם", "price": "18", "img": "https://media.getmood.io/warehouse/dynamic/272724.jfif"}, {"cat": "זיתים וחמוצים", "title": "סרניולה", "sub": "450 גרם", "price": "32", "img": "https://media.getmood.io/warehouse/dynamic/259954.jpg"}, {"cat": "זיתים וחמוצים", "title": "סנטה ענק שבור פיקנטי[מר וחריף]", "sub": "450 גרם", "price": "27", "img": "https://media.getmood.io/warehouse/dynamic/259956.jpg"}, {"cat": "זיתים וחמוצים", "title": "מרוקאי", "sub": "500גרם", "price": "25", "img": "https://media.getmood.io/warehouse/dynamic/259961.jpg"}, {"cat": "זיתים וחמוצים", "title": "זיתי קלמטה פרימיום בשמן זית", "sub": "450 גרם", "price": "50", "img": "https://media.getmood.io/warehouse/dynamic/269850.jpg"}, {"cat": "נקניקים", "title": "פסטורמה טורקית", "sub": "", "price": "36", "img": "https://media.getmood.io/warehouse/dynamic/259871.jpg"}, {"cat": "נקניקים", "title": "סינטה מעושן", "sub": "", "price": "36", "img": "https://media.getmood.io/warehouse/dynamic/264387.jpeg"}, {"cat": "נקניקים", "title": "פרשוטו בקר", "sub": "", "price": "36", "img": "https://media.getmood.io/warehouse/dynamic/259893.jpg"}, {"cat": "נקניקים", "title": "סוג'וק מקומי", "sub": "400 גרם", "price": "92", "img": "https://media.getmood.io/warehouse/dynamic/264389.jpeg"}, {"cat": "נקניקים", "title": "פסטרמה הודו של פעם", "sub": "", "price": "16", "img": "https://media.getmood.io/warehouse/dynamic/259887.jpg"}, {"cat": "נקניקים", "title": "פסטרמה הודו דל שומן", "sub": "", "price": "14", "img": "https://media.getmood.io/warehouse/dynamic/259890.jpg"}, {"cat": "נקניקים", "title": "פסטרמה צוענית", "sub": "", "price": "16", "img": "https://media.getmood.io/warehouse/dynamic/259888.jpg"}, {"cat": "נקניקים", "title": "פסטרמה הודו בדבש", "sub": "", "price": "28", "img": "https://media.getmood.io/warehouse/dynamic/259889.jpg"}, {"cat": "לחמים ומלוחים", "title": "בייגל אמריקאי מקמח מלא", "sub": "6 יחידות", "price": "42", "img": "https://media.getmood.io/warehouse/dynamic/278773.jpg"}, {"cat": "לחמים ומלוחים", "title": "בייגל שומשום", "sub": "6 יחידות", "price": "42", "img": "https://media.getmood.io/warehouse/dynamic/708869.png"}, {"cat": "לחמים ומלוחים", "title": "חלה לשבת", "sub": "", "price": "18", "img": "https://media.getmood.io/warehouse/dynamic/260475.jpg"}, {"cat": "לחמים ומלוחים", "title": "מארז 6 פרצעל בייגל (6 יח')", "sub": "", "price": "54", "img": "https://media.getmood.io/warehouse/dynamic/740827.png"}, {"cat": "לחמים ומלוחים", "title": "קרקר כוסמין מלא וכורכום", "sub": "", "price": "25", "img": "https://media.getmood.io/warehouse/dynamic/260033.jpg"}, {"cat": "לחמים ומלוחים", "title": "קרקר כוסמין מלא ופשתן", "sub": "", "price": "25", "img": "https://media.getmood.io/warehouse/dynamic/260034.jpg"}, {"cat": "לחמים ומלוחים", "title": "קרקר כוסמין מלא וקצח", "sub": "", "price": "25", "img": "https://media.getmood.io/warehouse/dynamic/260035.jpg"}, {"cat": "לחמים ומלוחים", "title": "קרקר כוסמין מלא ועירית", "sub": "", "price": "25", "img": "https://media.getmood.io/warehouse/dynamic/260036.jpg"}, {"cat": "מתוקים וקפה", "title": "מרמלדת חבושים במשקל", "sub": "100 גרם", "price": "17.9", "img": "https://media.getmood.io/warehouse/dynamic/311043.jpg"}, {"cat": "מתוקים וקפה", "title": "עוגיות צ'אטל", "sub": "", "price": "40", "img": "https://media.getmood.io/warehouse/dynamic/264572.jpeg"}, {"cat": "מתוקים וקפה", "title": "כעכי אניס", "sub": "", "price": "40", "img": "https://media.getmood.io/warehouse/dynamic/259986.jpg"}, {"cat": "מתוקים וקפה", "title": "מקלות פרמז'ן", "sub": "", "price": "40", "img": "https://media.getmood.io/warehouse/dynamic/264675.jpeg"}, {"cat": "מתוקים וקפה", "title": "דבש ביתי מפרחי אקליפטוס - מכוורת ירקוני", "sub": "500 גרם", "price": "32", "img": "https://media.getmood.io/warehouse/dynamic/318470.jpg"}, {"cat": "מתוקים וקפה", "title": "דבש ביתי מפרחי בר - מכוורת ירקוני", "sub": "500 גרם", "price": "32", "img": "https://media.getmood.io/warehouse/dynamic/318477.jpg"}, {"cat": "מתוקים וקפה", "title": "דבש ביתי מפרחי הדרים - מכוורת ירקוני", "sub": "500 גרם", "price": "32", "img": "https://media.getmood.io/warehouse/dynamic/318475.jpg"}, {"cat": "מתוקים וקפה", "title": "דבש ביתי מפרחי ינבוט - מכוורת ירקוני", "sub": "500 גרם", "price": "32", "img": "https://media.getmood.io/warehouse/dynamic/318471.jpg"}, {"cat": "מזווה", "title": "שמן זית מכרתים", "sub": "5 ליטר", "price": "295", "img": "https://media.getmood.io/warehouse/dynamic/263094.jpeg"}, {"cat": "מזווה", "title": "מיני גרסיני ללא גלוטן עם שמן זית", "sub": "250 גרם", "price": "18", "img": "https://media.getmood.io/warehouse/dynamic/645368.jpeg"}, {"cat": "מזווה", "title": "מלח מאלדון", "sub": "250 גרם", "price": "35", "img": "https://media.getmood.io/warehouse/dynamic/645371.jpeg"}, {"cat": "מזווה", "title": "פסטה טליאטלה", "sub": "500 גרם", "price": "12", "img": "https://media.getmood.io/warehouse/dynamic/645425.jpeg"}, {"cat": "מזווה", "title": "חומץ תפחים אורגני", "sub": "", "price": "18.5", "img": "https://media.getmood.io/warehouse/dynamic/650975.jpg"}, {"cat": "מזווה", "title": "שמן זית מכרתים", "sub": "1 ליטר", "price": "70", "img": "https://media.getmood.io/warehouse/dynamic/263092.jpeg"}, {"cat": "מזווה", "title": "שמן כמהין לבן", "sub": "250 מ:&quot;ל", "price": "65", "img": "https://media.getmood.io/warehouse/dynamic/315716.jpg"}, {"cat": "מזווה", "title": "שמן כמהין שחור", "sub": "250 מ:&quot;ל", "price": "65", "img": "https://media.getmood.io/warehouse/dynamic/315715.jpg"}, {"cat": "יינות ואלכוהול", "title": "מארז מתנה בניחוח יווני", "sub": "", "price": "350", "img": "https://media.getmood.io/warehouse/dynamic/264747.jpg"}, {"cat": "יינות ואלכוהול", "title": "ג'ין גורדון", "sub": "700 מ&quot;ל", "price": "78", "img": "https://media.getmood.io/warehouse/dynamic/657082.jpeg"}, {"cat": "יינות ואלכוהול", "title": "וודקה פינלנדיה", "sub": "700 מ&quot;ל", "price": "80", "img": "https://media.getmood.io/warehouse/dynamic/657083.jpeg"}, {"cat": "יינות ואלכוהול", "title": "יין מרלו רוזה JP", "sub": "750 מ&quot;ל", "price": "38", "img": "https://media.getmood.io/warehouse/dynamic/661580.jpeg"}, {"cat": "יינות ואלכוהול", "title": "יין שרדונה JP", "sub": "750 מ&quot;ל", "price": "38", "img": "https://media.getmood.io/warehouse/dynamic/661585.jpeg"}, {"cat": "יינות ואלכוהול", "title": "אוזו סאן ריבל חצי ליטר", "sub": "", "price": "58", "img": "https://media.getmood.io/warehouse/dynamic/264749.png"}, {"cat": "יינות ואלכוהול", "title": "יין רצינה", "sub": "", "price": "35", "img": "https://media.getmood.io/warehouse/dynamic/264753.jpg"}, {"cat": "יינות ואלכוהול", "title": "חגיגה יוונית", "sub": "", "price": "145", "img": "https://media.getmood.io/warehouse/dynamic/649613.webp"}, {"cat": "פינת המבצעים", "title": "שלושה בקבוקי יין קיאנטי רופינו", "sub": "", "price": "162", "img": "https://media.getmood.io/warehouse/dynamic/264725.jpg"}, {"cat": "פינת המבצעים", "title": "שלושה בקבוקי יין בלו נאן - גווירצטרמינר", "sub": "", "price": "135", "img": "https://media.getmood.io/warehouse/dynamic/264727.jpg"}, {"cat": "פינת המבצעים", "title": "שלושה בקבוקי יין ריוחה ספרדי", "sub": "", "price": "105", "img": "https://media.getmood.io/warehouse/dynamic/270164.jfif"}, {"cat": "פינת המבצעים", "title": "מארז פרמז'ן גראנה פאדאנו", "sub": "1 קילוגרם", "price": "120", "img": "https://media.getmood.io/warehouse/dynamic/292901.jpg"}, {"cat": "פינת המבצעים", "title": "מארז אולד אמסטרדם", "sub": "1 קילוגרם", "price": "160", "img": "https://media.getmood.io/warehouse/dynamic/264730.jpg"}, {"cat": "פינת המבצעים", "title": "מארז קשקבל טורקי", "sub": "", "price": "200", "img": "https://media.getmood.io/warehouse/dynamic/264734.jpg"}, {"cat": "פינת המבצעים", "title": "גבינה מגורדת פרמז'ן וקשקבל", "sub": "1 קילוגרם", "price": "120", "img": "https://media.getmood.io/warehouse/dynamic/295104.jpeg"}, {"cat": "פינת המבצעים", "title": "מארז קלמטה מגולען", "sub": "1 קילוגרם", "price": "60", "img": "https://media.getmood.io/warehouse/dynamic/264729.jpg"}];
+const ALL = "הכל";
+const cats = [ALL, ...new Set(PRODUCTS.map(p=>p.cat))];
+let activeCat = ALL, query = "";
+
+const pillsEl = document.getElementById('pills');
+cats.forEach(c=>{
+  const b = document.createElement('button');
+  b.className = 'pill' + (c===ALL?' on':'');
+  b.textContent = c;
+  b.onclick = ()=>{ activeCat=c; document.querySelectorAll('.pill').forEach(x=>x.classList.remove('on')); b.classList.add('on'); render(); };
+  pillsEl.appendChild(b);
+});
+
+document.getElementById('q').addEventListener('input', e=>{ query=e.target.value.trim(); render(); });
+
+let cartCount = 0;
+function addToCart(){
+  cartCount++;
+  document.getElementById('cartN').textContent = cartCount;
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 1400);
+}
+
+function render(){
+  const grid = document.getElementById('grid');
+  let items = PRODUCTS.filter(p => (activeCat===ALL || p.cat===activeCat));
+  if(query) items = items.filter(p => (p.title+" "+p.cat).includes(query));
+  document.getElementById('count').textContent = items.length + " מוצרים" + (activeCat!==ALL ? " ב" + activeCat : "") + (query ? " עבור \"" + query + "\"" : "");
+  grid.innerHTML = "";
+  if(!items.length){ grid.innerHTML = '<div class="empty">לא נמצאו מוצרים. נסו חיפוש אחר.</div>'; return; }
+  items.forEach(p=>{
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML =
+      (p.cat==='פינת המבצעים' ? '<span class="badge">מבצע</span>' : '') +
+      '<div class="ph"><img loading="lazy" src="'+p.img+'" alt=""></div>' +
+      '<div class="in"><h3></h3><div class="sub"></div>' +
+      '<div class="row"><div class="price">₪'+(+p.price||0)+'</div>' +
+      '<button class="add">+ הוספה</button></div></div>';
+    card.querySelector('h3').textContent = p.title;
+    card.querySelector('.sub').textContent = p.sub || p.cat;
+    card.querySelector('.add').onclick = addToCart;
+    grid.appendChild(card);
+  });
+}
+render();
+</script>
+</body>
+</html>
