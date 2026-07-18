@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>חיים רפאל - טעם של סלוניקי בלב לוינסקי - מאז 1958</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cyan:#2BC0E4; --cyan-deep:#0FA0C4; --cyan-pale:#E6F8FD;
+  --yellow:#F6B32B; --yellow-deep:#E09E12;
+  --navy:#1F3B73; --ink:#243040; --grey:#66718A; --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Assistant',sans-serif;background:var(--white);color:var(--ink);line-height:1.7}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Frank Ruhl Libre',serif;color:var(--navy)}
+
+/* labels: short yellow rule + tracked caps, like theirs */
+.tag-lbl{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:16px}
+.tag-lbl i{width:34px;height:3px;background:var(--yellow);border-radius:2px;font-style:normal}
+.tag-lbl span{letter-spacing:.32em;font-size:.72rem;font-weight:700;color:var(--cyan-deep)}
+
+/* ── Top strip ── */
+.topstrip{background:var(--cyan);color:#fff;font-size:.8rem;text-align:center;padding:8px 12px;font-weight:600;letter-spacing:.06em}
+
+/* ── Header ── */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(31,59,115,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:24px}
+.logo{display:flex;align-items:center;gap:12px}
+.roundel{width:50px;height:50px;flex-shrink:0}
+.logo-txt{line-height:1.05}
+.logo-txt .name{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.5rem;color:var(--navy);display:block}
+.logo-txt .tag{font-size:.62rem;letter-spacing:.3em;color:var(--cyan-deep);font-weight:700}
+nav.menu{display:flex;gap:26px;font-weight:600;font-size:.9rem;color:var(--ink)}
+nav.menu a{padding:5px 0;transition:color .2s}
+nav.menu a:hover{color:var(--cyan-deep)}
+.btn{display:inline-block;padding:13px 30px;border-radius:99px;font-weight:700;font-size:.88rem;transition:all .2s;cursor:pointer;border:none;letter-spacing:.06em}
+.btn-cyan{background:var(--cyan);color:#fff;box-shadow:0 6px 18px rgba(43,192,228,.4)}
+.btn-cyan:hover{background:var(--cyan-deep);transform:translateY(-2px)}
+.btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 6px 18px rgba(246,179,43,.4)}
+.btn-yellow:hover{background:var(--yellow-deep);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+@media(max-width:960px){nav.menu{display:none}}
+
+/* ── Hero ── */
+.hero{position:relative;min-height:78vh;display:grid;place-items:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/263146.jpeg') center/cover;filter:brightness(.48) saturate(1.1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,120,150,.35),rgba(20,40,80,.62))}
+.hero-in{position:relative;z-index:2;text-align:center;color:#fff;padding:90px 24px;max-width:840px}
+.hero .pre{letter-spacing:.4em;font-size:.8rem;font-weight:700;color:#FFE9B8;margin-bottom:20px;display:block}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.15;color:#fff;font-weight:900;text-shadow:0 4px 26px rgba(0,20,40,.4)}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);margin:22px auto 36px;max-width:560px;color:#EAF7FC;font-weight:400}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .btn{padding:15px 40px;font-size:1rem}
+@media(prefers-reduced-motion:no-preference){
+  .hero-in{animation:pop .8s ease both .15s}
+  @keyframes pop{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+
+/* ── Story ── */
+.story{padding:96px 0 88px;text-align:center}
+.story h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:900;margin-bottom:18px}
+.story p{max-width:640px;margin:0 auto;color:var(--grey);font-size:1.05rem}
+.story a{color:var(--cyan-deep);font-weight:700;border-bottom:2px solid var(--yellow)}
+
+/* ── Cyan band ── */
+.band{background:var(--cyan);color:#fff;position:relative;overflow:hidden}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:88px;padding-bottom:88px;position:relative;z-index:2}
+.band .tag-lbl{align-items:flex-start}
+.band .tag-lbl span{color:#fff}
+.band .tag-lbl i{background:var(--yellow)}
+.band h2{color:#fff;font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:900;line-height:1.25;margin-bottom:16px}
+.band p{color:#E8FAFF;font-size:1.02rem;margin-bottom:30px;max-width:460px}
+.band-img{position:relative}
+.band-img img{border-radius:14px;box-shadow:0 26px 60px rgba(9,60,80,.4);transform:rotate(1.5deg)}
+.band-img::after{content:"מאז 1958";position:absolute;top:-18px;right:-12px;background:var(--yellow);color:var(--navy);font-weight:800;font-size:.9rem;padding:10px 24px;border-radius:99px;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+@media(max-width:880px){.band .wrap{grid-template-columns:1fr;gap:48px}}
+
+/* ── Products ── */
+.shop-sec{padding:96px 0}
+.shop-head{text-align:center;max-width:620px;margin:0 auto 52px}
+.shop-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:900}
+.shop-head p{color:var(--grey);margin-top:12px}
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(31,59,115,.1);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;text-align:center}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(31,59,115,.18)}
+.card .ph{aspect-ratio:1/0.9;overflow:hidden;background:var(--cyan-pale)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.card:hover .ph img{transform:scale(1.06)}
+.card .in{padding:18px 18px 22px;display:flex;flex-direction:column;flex:1;align-items:center}
+.card h3{font-family:'Assistant';font-size:.98rem;font-weight:700;color:var(--ink);line-height:1.4;min-height:2.8em}
+.card .pr{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:1.3rem;color:var(--cyan-deep);margin:8px 0 14px}
+.card .add{margin-top:auto;background:var(--yellow);color:var(--navy);border:none;border-radius:99px;padding:10px 26px;font-family:'Assistant';font-weight:800;font-size:.85rem;cursor:pointer;transition:all .2s}
+.card .add:hover{background:var(--yellow-deep);transform:translateY(-1px)}
+@media(max-width:960px){.prods{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.prods{grid-template-columns:1fr}}
+.more{text-align:center;margin-top:46px}
+
+/* ── EAT BALKAN strip ── */
+.eat{position:relative;min-height:44vh;display:grid;place-items:center;overflow:hidden}
+.eat::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/263145.jpeg') center/cover;filter:brightness(.55) saturate(1.2)}
+.eat h2{position:relative;z-index:2;color:#fff;font-size:clamp(2rem,5.4vw,4rem);font-weight:900;letter-spacing:.04em;text-align:center;padding:80px 24px;text-shadow:0 4px 26px rgba(0,20,40,.5)}
+
+/* ── Partner (yellow, overlapping photo) ── */
+.partner{background:var(--yellow);position:relative;margin:90px 0}
+.partner .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
+.partner-img{position:relative;margin-top:-46px;margin-bottom:-46px}
+.partner-img img{border-radius:14px;box-shadow:0 26px 60px rgba(120,80,0,.35)}
+.partner-txt{padding:72px 0}
+.partner .tag-lbl{align-items:flex-start}
+.partner .tag-lbl span{color:var(--navy)}
+.partner .tag-lbl i{background:var(--navy)}
+.partner h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:900;line-height:1.25;margin-bottom:16px}
+.partner p{color:#5C4A14;font-size:1rem;margin-bottom:14px;max-width:460px}
+.partner b{color:var(--navy)}
+.partner .btn{margin-top:14px}
+@media(max-width:880px){.partner .wrap{grid-template-columns:1fr;gap:0}.partner-img{margin:0 0 8px;padding-top:40px}.partner-txt{padding:40px 0 64px}}
+
+/* ── Testimonials ── */
+.testi{padding:20px 0 96px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.t-card{background:var(--cyan-pale);border-radius:16px;padding:30px 28px;position:relative}
+.t-card::before{content:"”";position:absolute;top:10px;right:22px;font-family:'Frank Ruhl Libre',serif;font-size:3.4rem;color:var(--cyan);line-height:1}
+.t-card p{font-size:.96rem;color:var(--ink);margin-top:26px}
+.t-card .who{margin-top:16px;font-weight:700;color:var(--cyan-deep);font-size:.85rem}
+.stars{color:var(--yellow);letter-spacing:.12em;margin-top:4px;font-size:.85rem}
+@media(max-width:860px){.testi-grid{grid-template-columns:1fr}}
+
+/* ── Visit ── */
+.visit{background:var(--navy);color:#D9E2F5;text-align:center;padding:88px 24px}
+.visit h2{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900}
+.visit p{margin:14px auto 34px;max-width:460px;color:#B9C7E4}
+.visit .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── Footer ── */
+footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
+.f-grid h4{color:#fff;font-family:'Assistant';font-weight:800;margin-bottom:16px;font-size:.95rem;letter-spacing:.08em}
+.f-grid a{display:block;padding:4px 0;font-size:.9rem;transition:color .2s}
+.f-grid a:hover{color:var(--cyan)}
+.f-logo{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.5rem;color:#fff}
+.f-logo small{display:block;font-family:'Assistant';font-weight:600;font-size:.68rem;letter-spacing:.3em;color:var(--cyan);margin-top:5px}
+.f-grid p{font-size:.88rem;margin-top:14px;max-width:280px}
+.f-bot{border-top:1px solid #24396B;padding:18px 0;font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:860px){.f-grid{grid-template-columns:1fr 1fr}}
+
+.wa{position:fixed;bottom:24px;left:24px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="topstrip">משלוחים חינם בתל אביב בהזמנה מעל 250 ₪ · מגשי אירוח עד 48 שעות מראש · לוינסקי 36</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <svg class="roundel" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="47" fill="#2BC0E4"/>
+        <circle cx="50" cy="50" r="41" fill="none" stroke="#fff" stroke-width="1.6"/>
+        <text x="50" y="44" text-anchor="middle" fill="#fff" font-family="Frank Ruhl Libre,serif" font-weight="900" font-size="21">ח״ר</text>
+        <text x="50" y="63" text-anchor="middle" fill="#FFE9B8" font-family="Assistant,sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">1958</text>
+        <text x="50" y="80" text-anchor="middle" fill="#E6F8FD" font-family="Assistant,sans-serif" font-size="7" letter-spacing="1">לוינסקי 36</text>
+      </svg>
+      <span class="logo-txt">
+        <span class="name">חיים רפאל</span>
+        <span class="tag">טעם של סלוניקי · מאז 1958</span>
+      </span>
+    </a>
+    <nav class="menu">
+      <a href="shop.html">החנות</a>
+      <a href="#story">הסיפור שלנו</a>
+      <a href="#partner">סיטונאות ושפים</a>
+      <a href="#testi">ממליצים</a>
+      <a href="#visit">ביקור</a>
+    </nav>
+    <a class="btn btn-cyan" href="shop.html">להזמנה אונליין</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <span class="pre">לוינסקי 36 · תל אביב · מאז 1958</span>
+    <h1>טעם של סלוניקי.<br>בלב לוינסקי.</h1>
+    <p>זיתים מהחבית, פטה צאן, בורקאס חם ואוזו קר - מעדנייה משפחתית בדור שלישי, עם הטעמים שהגיעו מיוון ונשארו בבית.</p>
+    <div class="hero-btns">
+      <a class="btn btn-yellow" href="shop.html">לחנות האונליין</a>
+      <a class="btn btn-white" href="#partner">לשפים ולמסעדות</a>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="tag-lbl"><i></i><span>מי אנחנו</span></div>
+    <h2>הסיפור שלנו</h2>
+    <p>ב-1958 פתחו חיים רפאל, יליד סלוניקי, ואסתר, ילידת קורפו, מכולת קטנה בשוק לוינסקי. היום, בדור השלישי, אנחנו עדיין בוחרים ביד כל גבינה, כל דג כבוש וכל זית - במסורת המטבח היהודי-ספרדי של הבלקן. <a href="#partner">גלו את הסיפור המלא ←</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div>
+      <div class="tag-lbl"><i></i><span>איכות מובטחת</span></div>
+      <h2>כל מוצר עובר קודם<br>את הטעימה שלנו</h2>
+      <p>מהזיתים שנכבשים אצלנו ועד הגבינות שמגיעות מיוון, מצרפת ומאיטליה - שום דבר לא עולה על הדלפק לפני שטעמנו ואישרנו. ככה זה כבר שלושה דורות.</p>
+      <a class="btn btn-white" href="shop.html">לכל המוצרים</a>
+    </div>
+    <div class="band-img">
+      <img src="https://media.getmood.io/warehouse/dynamic/263146.jpeg" alt="מגש זיתים מהעולם">
+    </div>
+  </div>
+</section>
+
+<section class="shop-sec">
+  <div class="wrap">
+    <div class="shop-head">
+      <div class="tag-lbl"><i></i><span>הזמנה אונליין</span></div>
+      <h2>מוצרים יווניים מובחרים</h2>
+      <p>הנמכרים ביותר מהפינה היוונית של הדלפק - טריים, אמיתיים, ישר מהמקור.</p>
+    </div>
+    <div class="prods">
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/263094.jpeg" alt="שמן זית מכרתים 5 ליטר"></a>
+        <div class="in"><h3>שמן זית מכרתים · פח 5 ליטר</h3><div class="pr">₪295</div><button class="add">הוספה לסל</button></div>
+      </div>
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/269850.jpg" alt="זיתי קלמטה פרימיום"></a>
+        <div class="in"><h3>זיתי קלמטה פרימיום בשמן זית</h3><div class="pr">₪50</div><button class="add">הוספה לסל</button></div>
+      </div>
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/263340.jpeg" alt="פטה צאן יוונית"></a>
+        <div class="in"><h3>פטה צאן יוונית מחלב עיזים</h3><div class="pr">₪13 <small style="font-size:.7rem;color:var(--grey)">ל-100 גרם</small></div><button class="add">הוספה לסל</button></div>
+      </div>
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/264748.jpg" alt="אוזו 7"></a>
+        <div class="in"><h3>אוזו 7</h3><div class="pr">₪63</div><button class="add">הוספה לסל</button></div>
+      </div>
+    </div>
+    <div class="more"><a class="btn btn-cyan" href="shop.html">לכל החנות ←</a></div>
+  </div>
+</section>
+
+<section class="eat">
+  <h2>תאכלו בלקני.<br>תחיו טוב.</h2>
+</section>
+
+<section class="partner" id="partner">
+  <div class="wrap">
+    <div class="partner-img">
+      <img src="https://media.getmood.io/warehouse/dynamic/651154.jpeg" alt="מגש סלמון ומטיאס">
+    </div>
+    <div class="partner-txt">
+      <div class="tag-lbl"><i></i><span>סיטונאות</span></div>
+      <h2>הצטרפו כשותפים<br>של חיים רפאל</h2>
+      <p>ספקו ללקוחות שלכם טעמים בלקניים אמיתיים. תוכנית הסיטונאות שלנו מבטיחה מוצרים באיכות גבוהה, במחירים תחרותיים, עם אספקה קבועה ומהירה - למסעדות, מעדניות, בתי מלון ורשתות.</p>
+      <p><b>נשמח לחלוק את המטבח שלנו איתכם ועם הלקוחות שלכם!</b></p>
+      <a class="btn btn-cyan" href="https://wa.me/97236826147">דברו איתנו עכשיו</a>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="testi">
+  <div class="wrap">
+    <div class="shop-head" style="margin-bottom:0">
+      <div class="tag-lbl"><i></i><span>לקוחות מרוצים</span></div>
+      <h2>אומרים עלינו</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card">
+        <p>אין שבת בלי הזיתים והבורקאס מלוינסקי. שלושה דורות אצלנו קונים משלושה דורות שלהם.</p>
+        <div class="who">לקוחה קבועה, תל אביב</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="t-card">
+        <p>הפטה והקשקבל שלהם על המנות שלנו כבר עשור. חומר גלם שאי אפשר למצוא בשום מקום אחר.</p>
+        <div class="who">שף, מסעדה בתל אביב</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="t-card">
+        <p>חיפשתי את שמן הזית מכרתים שטעמנו בחופשה - רק אצלם מצאתי. שירות, מלאי ומחיר מעולים.</p>
+        <div class="who">לקוח מהצפון</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="tag-lbl"><i></i><span style="color:#8FD8EC">בואו לבקר</span></div>
+  <h2>לוינסקי 36, תל אביב</h2>
+  <p>א'-ה' 8:00-19:00 · ו' וערבי חג 7:30-15:00 · 03-6826147</p>
+  <div class="row">
+    <a class="btn btn-cyan" href="tel:036826147">להתקשר</a>
+    <a class="btn btn-yellow" href="https://waze.com/ul?q=לוינסקי 36 תל אביב">ניווט ב-Waze</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo">חיים רפאל<small>טעם של סלוניקי · מאז 1958</small></div>
+        <p>מעדנייה משפחתית בדור שלישי בלב שוק לוינסקי - בית האוכל הבלקני בישראל.</p>
+      </div>
+      <div>
+        <h4>החנות</h4>
+        <a href="shop.html">כל המוצרים</a>
+        <a href="shop.html">הפינה היוונית</a>
+        <a href="shop.html">מגשי אירוח</a>
+        <a href="product.html">מגש הגבינות שלנו</a>
+      </div>
+      <div>
+        <h4>מידע</h4>
+        <a href="#story">הסיפור שלנו</a>
+        <a href="#partner">סיטונאות ושותפים</a>
+        <a href="#testi">ממליצים</a>
+      </div>
+      <div>
+        <h4>קשר</h4>
+        <a href="tel:036826147">03-6826147</a>
+        <a href="#visit">לוינסקי 36, תל אביב</a>
+        <a href="https://wa.me/97236826147">וואטסאפ</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© חיים רפאל. כל הזכויות שמורות.</span>
+      <span>הדמיית עיצוב - הצעה לשדרוג האתר · הציטוטים להדגמה בלבד</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/97236826147" aria-label="וואטסאפ">
+<svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.8 1.5 4.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.2.2-3.5-.7-3-1.2-4.9-4.2-5.1-4.4-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4-.1.7.5.3.6.9 2.1.9 2.3.1.2.1.3 0 .5-.1.2-.2.4-.4.6-.2.2-.4.5-.5.6-.2.2-.4.4-.2.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1.2-.2.8-1 1.1-1.3.2-.3.5-.3.8-.2.3.1 2 1 2.4 1.1.4.2.6.3.7.4.1.3.1.9-.2 1.7z"/></svg>
+</a>
+
+</body>
+</html>
