@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>משלוחים ושאלות נפוצות - חיים רפאל</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#B5122E; --red-deep:#8E0E24; --pale:#FBEFE7;
+  --yellow:#F6B32B; --navy:#4A1520; --ink:#2B221C; --grey:#6E5F52;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Assistant',sans-serif;background:#fff;color:var(--ink);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Frank Ruhl Libre',serif;color:var(--navy)}
+
+.topstrip{background:var(--red);color:#fff;font-size:.8rem;text-align:center;padding:8px 12px;font-weight:600}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(43,20,15,.09)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:24px}
+.logo{line-height:1.05}
+.logo .name{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.5rem;color:var(--navy);display:block}
+.logo .tag{font-size:.62rem;letter-spacing:.3em;color:var(--red);font-weight:700}
+nav.menu{display:flex;gap:26px;font-weight:600;font-size:.9rem}
+nav.menu a:hover{color:var(--red)}
+.btn{display:inline-block;padding:13px 30px;border-radius:99px;font-weight:700;font-size:.88rem;background:var(--red);color:#fff;box-shadow:0 6px 18px rgba(181,18,46,.35);transition:all .2s;border:none;cursor:pointer}
+.btn:hover{background:var(--red-deep);transform:translateY(-2px)}
+@media(max-width:860px){nav.menu{display:none}}
+
+.page-head{text-align:center;padding:64px 24px 20px}
+.tag-lbl{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:14px}
+.tag-lbl i{width:34px;height:3px;background:var(--yellow);border-radius:2px;font-style:normal}
+.tag-lbl span{letter-spacing:.32em;font-size:.72rem;font-weight:700;color:var(--red)}
+.page-head h1{font-size:clamp(2rem,4vw,3rem);font-weight:900}
+.page-head p{color:var(--grey);margin-top:10px}
+
+.sec{padding:44px 0}
+.sec h2{font-size:1.5rem;font-weight:900;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.sec h2::after{content:"";flex:1;height:1px;background:rgba(43,20,15,.12)}
+
+/* delivery table */
+.dtable{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 28px rgba(43,20,15,.1)}
+.dtable th{background:var(--red);color:#fff;padding:14px 18px;text-align:right;font-weight:700;font-size:.95rem}
+.dtable td{padding:14px 18px;border-bottom:1px solid rgba(43,20,15,.08);font-size:.95rem}
+.dtable tr:last-child td{border-bottom:none}
+.dtable td.pr{font-family:'Frank Ruhl Libre',serif;font-weight:700;color:var(--red);white-space:nowrap}
+.note-box{background:var(--pale);border-radius:14px;padding:20px 24px;margin-top:18px;font-size:.92rem;color:#5C4438}
+.note-box b{color:var(--navy)}
+
+/* faq accordion */
+.faq details{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(43,20,15,.08);margin-bottom:12px;overflow:hidden}
+.faq summary{padding:18px 22px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem}
+.faq summary::after{content:"+";font-family:'Frank Ruhl Libre',serif;font-size:1.4rem;color:var(--red);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .body{padding:0 22px 20px;color:var(--grey);font-size:.95rem}
+
+.cta{background:var(--yellow);text-align:center;padding:56px 24px;border-radius:0}
+.cta h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:900;margin-bottom:8px}
+.cta p{color:#5C4A14;margin-bottom:24px}
+
+footer{background:#2A1410;color:#B59E8C;padding:26px 0;text-align:center;font-size:.85rem}
+footer b{color:var(--yellow)}
+.note{margin-top:6px;font-size:.76rem;opacity:.7}
+</style>
+</head>
+<body>
+
+<div class="topstrip">הזמנות עד 22:00 - אספקה כבר למחרת · לוינסקי 36 · 03-6826147</div>
+
+<header>
+  <div class="wrap nav" style="max-width:1200px">
+    <a class="logo" href="greek.html">
+      <span class="name">חיים רפאל</span>
+      <span class="tag">טעם של סלוניקי · מאז 1958</span>
+    </a>
+    <nav class="menu">
+      <a href="shop.html">החנות</a>
+      <a href="story.html">הסיפור שלנו</a>
+      <a href="faq.html" style="color:var(--red)">משלוחים ושאלות</a>
+    </nav>
+    <a class="btn" href="shop.html">להזמנה אונליין</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="tag-lbl"><i></i><span>כל התשובות</span></div>
+  <h1>משלוחים ושאלות נפוצות</h1>
+  <p>המידע מבוסס על מדיניות המשלוחים הרשמית של המעדנייה</p>
+</div>
+
+<section class="sec wrap">
+  <h2>אזורי חלוקה ומחירים</h2>
+  <table class="dtable">
+    <tr><th>אזור</th><th style="width:120px">דמי משלוח</th></tr>
+    <tr><td>גבעתיים, דרום ומרכז תל אביב</td><td class="pr">40 ₪</td></tr>
+    <tr><td>חולון, פתח תקווה, צפון תל אביב, אזור, בת ים</td><td class="pr">50 ₪</td></tr>
+    <tr><td>יהוד, קריית אונו, ראשון לציון, רמת השרון, אור יהודה, גני תקווה</td><td class="pr">60 ₪</td></tr>
+    <tr><td>לוד, שוהם, סביון, רשפון, הוד השרון</td><td class="pr">80 ₪</td></tr>
+  </table>
+  <div class="note-box"><b>שימו לב:</b> אם השליח לא מקבל מענה בכתובת או בטלפון - ההזמנה חוזרת לחנות וניתן לאסוף אותה באיסוף עצמי. במקרים אלה לא יינתן זיכוי בגין דמי המשלוח.</div>
+</section>
+
+<section class="sec wrap faq">
+  <h2>שאלות נפוצות</h2>
+  <details open>
+    <summary>מתי מגיעים המשלוחים?</summary>
+    <div class="body">משלוחים מסופקים בימים א'-ו' בין השעות 9:00-13:00. הזמנות שמתקבלות עד 22:00 - יסופקו כבר ביום למחרת. את יום האיסוף או המשלוח בוחרים בפרטי ההזמנה.</div>
+  </details>
+  <details>
+    <summary>אפשר לאסוף מהחנות?</summary>
+    <div class="body">בוודאי. איסוף עצמי מלוינסקי 36, תל אביב - בתיאום בעת ההזמנה. א'-ה' 8:00-19:00, ו' וערבי חג 7:30-15:00.</div>
+  </details>
+  <details>
+    <summary>כמה זמן מראש מזמינים מגשי אירוח?</summary>
+    <div class="body">מגשי אירוח מורכבים טריים ביום האספקה - יש להזמין עד 48 שעות מראש. לבקשות מיוחדות והתאמות אפשר לכתוב בהערות ההזמנה או לדבר איתנו בוואטסאפ.</div>
+  </details>
+  <details>
+    <summary>יש לכם אספקה לעסקים ומסעדות?</summary>
+    <div class="body">כן - מחלקה עסקית לשפים, מסעדות, מעדניות ובתי מלון, עם קו אספקה קבוע ומחירי סיטונאות. דברו איתנו בטלפון 03-6826147 או בוואטסאפ.</div>
+  </details>
+  <details>
+    <summary>מה מדיניות ביטול העסקה?</summary>
+    <div class="body">ביטול עסקה בהתאם לתקנות הגנת הצרכן (ביטול עסקה), התשע"א-2010 וחוק הגנת הצרכן, התשמ"א-1981.</div>
+  </details>
+  <details>
+    <summary>יש בקשה מיוחדת?</summary>
+    <div class="body">דברו איתנו בטלפון או בוואטסאפ - 03-6826147. עונים מהר ותמיד אפשר להתאים.</div>
+  </details>
+</section>
+
+<section class="cta">
+  <h2>נשאר רעבים? זה הזמן להזמין</h2>
+  <p>הזמנה עד 22:00 - המשלוח אצלכם כבר מחר בבוקר</p>
+  <a class="btn" href="shop.html">לחנות האונליין ←</a>
+</section>
+
+<footer>
+  <div>חיים רפאל · בית האוכל הבלקני · <b>מאז 1958</b> · לוינסקי 36, תל אביב</div>
+  <div class="note">הדמיית עיצוב - הצעה לשדרוג האתר · המידע ממדיניות המשלוחים באתר הרשמי</div>
+</footer>
+
+</body>
+</html>

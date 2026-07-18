@@ -3,156 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>חיים רפאל - בית האוכל הבלקני בישראל - מאז 1958</title>
+<title>חיים רפאל - טעם של סלוניקי בלב לוינסקי - מאז 1958</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --red:#A31026; --red-deep:#7E0C1E; --cream:#F7F1E3; --paper:#EFE6D2;
-  --ink:#191512; --ink-soft:#5E5548; --gold:#B98A2F; --gold-lite:#E3C878; --white:#FFFDF7;
+  --cyan:#B5122E; --cyan-deep:#8E0E24; --cyan-pale:#FBEFE7;
+  --yellow:#F6B32B; --yellow-deep:#E09E12;
+  --navy:#4A1520; --ink:#2B221C; --grey:#6E5F52; --white:#FFFFFF;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Heebo',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+body{font-family:'Assistant',sans-serif;background:var(--white);color:var(--ink);line-height:1.7}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:'Suez One',serif;font-weight:400}
-.serif{font-family:'Frank Ruhl Libre',serif}
+h1,h2,h3{font-family:'Frank Ruhl Libre',serif;color:var(--navy)}
+
+/* labels: short yellow rule + tracked caps, like theirs */
+.tag-lbl{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:16px}
+.tag-lbl i{width:34px;height:3px;background:var(--yellow);border-radius:2px;font-style:normal}
+.tag-lbl span{letter-spacing:.32em;font-size:.72rem;font-weight:700;color:var(--cyan-deep)}
 
 /* ── Top strip ── */
-.topstrip{background:var(--red);color:#F6E7CB;font-size:.82rem;text-align:center;padding:8px 12px;letter-spacing:.04em}
-.topstrip b{color:var(--gold-lite);font-weight:600}
+.topstrip{background:var(--cyan);color:#fff;font-size:.8rem;text-align:center;padding:8px 12px;font-weight:600;letter-spacing:.06em}
 
 /* ── Header ── */
-header{position:sticky;top:0;z-index:50;background:rgba(247,241,227,.96);backdrop-filter:blur(10px);border-bottom:3px double rgba(25,21,18,.25)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(43,20,15,.09)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:24px}
-.logo{display:flex;align-items:center;gap:14px}
-.roundel{width:54px;height:54px;flex-shrink:0}
+.logo{display:flex;align-items:center;gap:12px}
+.roundel{width:50px;height:50px;flex-shrink:0}
 .logo-txt{line-height:1.05}
-.logo-txt .name{font-family:'Suez One',serif;font-size:1.55rem;color:var(--red);display:block}
-.logo-txt .tag{font-size:.66rem;letter-spacing:.3em;color:var(--ink-soft)}
-nav.menu{display:flex;gap:26px;font-weight:500;font-size:.95rem}
-nav.menu a{padding:4px 0;border-bottom:2px solid transparent;transition:all .2s}
-nav.menu a:hover{color:var(--red);border-bottom-color:var(--gold)}
-.btn{display:inline-block;padding:12px 28px;border-radius:2px;font-weight:600;font-size:.95rem;transition:all .2s;cursor:pointer;border:none;letter-spacing:.02em}
-.btn-red{background:var(--red);color:#FFFDF7;box-shadow:0 2px 0 var(--red-deep)}
-.btn-red:hover{background:var(--red-deep);transform:translateY(-1px)}
-.btn-gold{background:var(--gold);color:#FFFDF7;box-shadow:0 2px 0 #8F6A22}
-.btn-gold:hover{filter:brightness(1.08)}
-.btn-outline{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
-.btn-outline:hover{background:var(--ink);color:var(--cream)}
-.btn-outline-w{border:1.5px solid #F6E7CB;color:#F6E7CB;background:transparent}
-.btn-outline-w:hover{background:#F6E7CB;color:var(--ink)}
+.logo-txt .name{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.5rem;color:var(--navy);display:block}
+.logo-txt .tag{font-size:.62rem;letter-spacing:.3em;color:var(--cyan-deep);font-weight:700}
+nav.menu{display:flex;gap:26px;font-weight:600;font-size:.9rem;color:var(--ink)}
+nav.menu a{padding:5px 0;transition:color .2s}
+nav.menu a:hover{color:var(--cyan-deep)}
+.btn{display:inline-block;padding:13px 30px;border-radius:99px;font-weight:700;font-size:.88rem;transition:all .2s;cursor:pointer;border:none;letter-spacing:.06em}
+.btn-cyan{background:var(--cyan);color:#fff;box-shadow:0 6px 18px rgba(181,18,46,.35)}
+.btn-cyan:hover{background:var(--cyan-deep);transform:translateY(-2px)}
+.btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 6px 18px rgba(246,179,43,.4)}
+.btn-yellow:hover{background:var(--yellow-deep);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
 @media(max-width:960px){nav.menu{display:none}}
 
 /* ── Hero ── */
-.hero{position:relative;min-height:86vh;display:grid;place-items:center;overflow:hidden;background:var(--ink)}
-.hero::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/263137.jpeg') center/cover;filter:brightness(.42) sepia(.25) saturate(1.1)}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(15,11,8,.52) 0%,rgba(15,11,8,.28) 55%,rgba(15,11,8,.55) 100%)}
-.hero-frame{position:absolute;inset:22px;border:1.5px solid rgba(227,200,120,.55);z-index:1;pointer-events:none}
-.hero-frame::after{content:"";position:absolute;inset:6px;border:1px solid rgba(227,200,120,.3)}
-.hero-in{position:relative;z-index:2;text-align:center;color:#FFFDF7;padding:110px 32px;max-width:900px}
-.hero .est{display:flex;align-items:center;gap:16px;justify-content:center;color:var(--gold-lite);letter-spacing:.4em;font-size:.85rem;margin-bottom:28px}
-.hero .est::before,.hero .est::after{content:"";width:52px;height:1px;background:var(--gold-lite);opacity:.6}
-.hero h1{font-size:clamp(2.7rem,6.4vw,5rem);line-height:1.12;text-shadow:0 4px 30px rgba(0,0,0,.5)}
-.hero h1 em{font-style:normal;color:var(--gold-lite)}
-.hero .sub{font-family:'Frank Ruhl Libre',serif;font-size:clamp(1.05rem,2.1vw,1.4rem);margin:26px auto 40px;max-width:640px;color:#EFE3CB;font-weight:400}
+.hero{position:relative;min-height:78vh;display:grid;place-items:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/263146.jpeg') center/cover;filter:brightness(.48) saturate(1.1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(120,20,35,.35),rgba(35,12,12,.62))}
+.hero-in{position:relative;z-index:2;text-align:center;color:#fff;padding:90px 24px;max-width:840px}
+.hero .pre{letter-spacing:.4em;font-size:.8rem;font-weight:700;color:#FFE9B8;margin-bottom:20px;display:block}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.15;color:#fff;font-weight:900;text-shadow:0 4px 26px rgba(0,20,40,.4)}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);margin:22px auto 36px;max-width:560px;color:#F7EDE4;font-weight:400}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.hero .btn{padding:15px 40px;font-size:1.02rem}
+.hero .btn{padding:15px 40px;font-size:1rem}
+@media(prefers-reduced-motion:no-preference){
+  .hero-in{animation:pop .8s ease both .15s}
+  @keyframes pop{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
 
-/* ── Ticker ── */
-.ticker{background:var(--ink);color:#E8D9B8;overflow:hidden;border-top:3px double var(--gold);border-bottom:3px double var(--gold);padding:13px 0;white-space:nowrap}
-.ticker-in{display:inline-block;animation:tick 38s linear infinite;font-family:'Frank Ruhl Libre',serif;font-size:1.02rem}
-.ticker-in span{margin:0 18px}
-.ticker-in b{color:var(--gold-lite);font-weight:400}
-@keyframes tick{from{transform:translateX(-0%)}to{transform:translateX(50%)}}
-@media(prefers-reduced-motion:reduce){.ticker-in{animation:none}}
+/* ── Story ── */
+.story{padding:96px 0 88px;text-align:center}
+.story h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:900;margin-bottom:18px}
+.story p{max-width:640px;margin:0 auto;color:var(--grey);font-size:1.05rem}
+.story a{color:var(--cyan-deep);font-weight:700;border-bottom:2px solid var(--yellow)}
 
-/* ── Section heads ── */
-.sec{padding:90px 0}
-.sec-head{text-align:center;max-width:660px;margin:0 auto 56px}
-.kicker{color:var(--red);font-weight:700;letter-spacing:.3em;font-size:.78rem}
-.sec-head h2{font-size:clamp(2rem,3.8vw,2.9rem);margin:12px 0 14px}
-.sec-head p{color:var(--ink-soft);font-size:1.02rem}
-.orn{display:flex;align-items:center;gap:10px;justify-content:center;margin-top:18px;color:var(--gold)}
-.orn::before,.orn::after{content:"";width:44px;height:1px;background:var(--gold)}
-.orn i{font-style:normal;font-size:.7rem;letter-spacing:.4em}
+/* ── Cyan band ── */
+.band{background:var(--cyan);color:#fff;position:relative;overflow:hidden}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:88px;padding-bottom:88px;position:relative;z-index:2}
+.band .tag-lbl{align-items:flex-start}
+.band .tag-lbl span{color:#fff}
+.band .tag-lbl i{background:var(--yellow)}
+.band h2{color:#fff;font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:900;line-height:1.25;margin-bottom:16px}
+.band p{color:#F9E9E0;font-size:1.02rem;margin-bottom:30px;max-width:460px}
+.band-img{position:relative}
+.band-img img{border-radius:14px;box-shadow:0 26px 60px rgba(60,10,18,.4);transform:rotate(1.5deg)}
+.band-img::after{content:"מאז 1958";position:absolute;top:-18px;right:-12px;background:var(--yellow);color:var(--navy);font-weight:800;font-size:.9rem;padding:10px 24px;border-radius:99px;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+@media(max-width:880px){.band .wrap{grid-template-columns:1fr;gap:48px}}
 
-/* ── Heritage timeline ── */
-.heritage{background:var(--paper);border-top:1px solid rgba(25,21,18,.08);border-bottom:1px solid rgba(25,21,18,.08)}
-.her-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
-.her-img{position:relative}
-.her-img img{filter:sepia(.35) contrast(.98);border:10px solid #fff;box-shadow:0 18px 50px rgba(25,21,18,.25);transform:rotate(-1.2deg)}
-.her-img::after{content:"סלוניקי · קורפו · תל אביב";position:absolute;bottom:-18px;right:14px;background:var(--ink);color:var(--gold-lite);font-size:.8rem;letter-spacing:.22em;padding:10px 22px}
-.tl{list-style:none;margin-top:8px}
-.tl li{position:relative;padding:0 34px 26px 0;border-right:1.5px solid rgba(25,21,18,.2)}
-.tl li:last-child{border-right-color:transparent;padding-bottom:0}
-.tl li::before{content:"";position:absolute;right:-7.5px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--cream);border:3px solid var(--red)}
-.tl .yr{font-family:'Suez One',serif;color:var(--red);font-size:1.25rem;display:block;line-height:1.2}
-.tl p{color:var(--ink-soft);font-size:.95rem;max-width:440px}
-.her-quote{font-family:'Frank Ruhl Libre',serif;font-size:1.1rem;color:var(--ink);border-right:3px solid var(--gold);padding-right:18px;margin-top:26px;font-weight:500}
-.her-quote small{display:block;font-family:'Heebo';font-size:.8rem;color:var(--ink-soft);margin-top:6px;font-weight:400}
-@media(max-width:900px){.her-grid{grid-template-columns:1fr;gap:56px}}
+/* ── Products ── */
+.shop-sec{padding:96px 0}
+.shop-head{text-align:center;max-width:620px;margin:0 auto 52px}
+.shop-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:900}
+.shop-head p{color:var(--grey);margin-top:12px}
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(43,20,15,.12);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;text-align:center}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(43,20,15,.2)}
+.card .ph{aspect-ratio:1/0.9;overflow:hidden;background:var(--cyan-pale)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.card:hover .ph img{transform:scale(1.06)}
+.card .in{padding:18px 18px 22px;display:flex;flex-direction:column;flex:1;align-items:center}
+.card h3{font-family:'Assistant';font-size:.98rem;font-weight:700;color:var(--ink);line-height:1.4;min-height:2.8em}
+.card .pr{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:1.3rem;color:var(--cyan-deep);margin:8px 0 14px}
+.card .add{margin-top:auto;background:var(--yellow);color:var(--navy);border:none;border-radius:99px;padding:10px 26px;font-family:'Assistant';font-weight:800;font-size:.85rem;cursor:pointer;transition:all .2s}
+.card .add:hover{background:var(--yellow-deep);transform:translateY(-1px)}
+@media(max-width:960px){.prods{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.prods{grid-template-columns:1fr}}
+.more{text-align:center;margin-top:46px}
 
-/* ── B2B ── */
-.b2b{background:var(--ink);color:#EFE3CB;position:relative;overflow:hidden}
-.b2b::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/651154.jpeg') center/cover;opacity:.1}
-.b2b .wrap{position:relative;z-index:2}
-.b2b .sec-head h2{color:#FFFDF7}
-.b2b .sec-head p{color:#C9BB9E}
-.b2b .kicker{color:var(--gold-lite)}
-.b2b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.b2b-card{border:1px solid rgba(227,200,120,.35);padding:36px 30px;background:rgba(25,21,18,.55);transition:border-color .2s, transform .2s}
-.b2b-card:hover{border-color:var(--gold-lite);transform:translateY(-4px)}
-.b2b-card .num{font-family:'Suez One',serif;color:var(--gold-lite);font-size:.95rem;letter-spacing:.28em;margin-bottom:14px;display:block}
-.b2b-card h3{font-size:1.35rem;color:#FFFDF7;margin-bottom:12px}
-.b2b-card p{font-size:.93rem;color:#C9BB9E;font-weight:300}
-.b2b-cta{text-align:center;margin-top:48px}
-.b2b-cta .note{margin-top:14px;font-size:.85rem;color:#A99A7D}
-@media(max-width:860px){.b2b-grid{grid-template-columns:1fr}}
+/* ── EAT BALKAN strip ── */
+.eat{position:relative;min-height:44vh;display:grid;place-items:center;overflow:hidden}
+.eat::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/263145.jpeg') center/cover;filter:brightness(.55) saturate(1.2)}
+.eat h2{position:relative;z-index:2;color:#fff;font-size:clamp(2rem,5.4vw,4rem);font-weight:900;letter-spacing:.04em;text-align:center;padding:80px 24px;text-shadow:0 4px 26px rgba(0,20,40,.5)}
 
-/* ── Departments ── */
-.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.dep{position:relative;overflow:hidden;aspect-ratio:4/3;cursor:pointer;border:8px solid #fff;box-shadow:0 10px 30px rgba(25,21,18,.14)}
-.dep img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.dep:hover img{transform:scale(1.06)}
-.dep .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(15,11,8,.82))}
-.dep .lbl{position:absolute;bottom:0;right:0;left:0;padding:18px;color:#FFFDF7;z-index:2;display:flex;align-items:baseline;justify-content:space-between}
-.dep .lbl h3{font-size:1.25rem}
-.dep .lbl span{font-size:.78rem;color:var(--gold-lite);letter-spacing:.08em}
-@media(max-width:900px){.deps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.deps{grid-template-columns:1fr}}
+/* ── Partner (yellow, overlapping photo) ── */
+.partner{background:var(--yellow);position:relative;margin:90px 0}
+.partner .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
+.partner-img{position:relative;margin-top:-46px;margin-bottom:-46px}
+.partner-img img{border-radius:14px;box-shadow:0 26px 60px rgba(120,80,0,.35)}
+.partner-txt{padding:72px 0}
+.partner .tag-lbl{align-items:flex-start}
+.partner .tag-lbl span{color:var(--navy)}
+.partner .tag-lbl i{background:var(--navy)}
+.partner h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:900;line-height:1.25;margin-bottom:16px}
+.partner p{color:#5C4A14;font-size:1rem;margin-bottom:14px;max-width:460px}
+.partner b{color:var(--navy)}
+.partner .btn{margin-top:14px}
+@media(max-width:880px){.partner .wrap{grid-template-columns:1fr;gap:0}.partner-img{margin:0 0 8px;padding-top:40px}.partner-txt{padding:40px 0 64px}}
 
-/* ── Foodies strip ── */
-.foodies{background:var(--red);color:#FFF6E6;text-align:center;padding:64px 24px}
-.foodies h2{font-size:clamp(1.7rem,3vw,2.4rem);max-width:760px;margin:0 auto}
-.foodies h2 em{font-style:normal;color:var(--gold-lite)}
-.foodies p{margin:16px auto 30px;max-width:560px;color:#F2DDBB;font-weight:300}
+/* ── Testimonials ── */
+.testi{padding:20px 0 96px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.t-card{background:var(--cyan-pale);border-radius:16px;padding:30px 28px;position:relative}
+.t-card::before{content:"”";position:absolute;top:10px;right:22px;font-family:'Frank Ruhl Libre',serif;font-size:3.4rem;color:var(--cyan);line-height:1}
+.t-card p{font-size:.96rem;color:var(--ink);margin-top:26px}
+.t-card .who{margin-top:16px;font-weight:700;color:var(--cyan-deep);font-size:.85rem}
+.stars{color:var(--yellow);letter-spacing:.12em;margin-top:4px;font-size:.85rem}
+@media(max-width:860px){.testi-grid{grid-template-columns:1fr}}
 
 /* ── Visit ── */
-.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.visit h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:10px 0 24px}
-.vrow{display:flex;gap:16px;margin-bottom:20px;align-items:flex-start}
-.vrow .ic{width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:1.05rem;flex-shrink:0}
-.vrow b{display:block}
-.vrow span{color:var(--ink-soft);font-size:.92rem}
-.addr-card{background:var(--ink);color:#EFE3CB;text-align:center;padding:52px 32px;border:1px solid var(--gold);position:relative}
-.addr-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(227,200,120,.35);pointer-events:none}
-.addr-card .big{font-family:'Suez One',serif;font-size:2.4rem;color:var(--gold-lite)}
-.addr-card p{margin-top:8px;color:#C9BB9E}
-@media(max-width:860px){.visit .wrap{grid-template-columns:1fr}}
+.visit{background:var(--navy);color:#EFDCD2;text-align:center;padding:88px 24px}
+.visit h2{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900}
+.visit p{margin:14px auto 34px;max-width:460px;color:#D3B6A8}
+.visit .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 /* ── Footer ── */
-footer{background:var(--ink);color:#A99A7D;padding:64px 0 0;border-top:3px double var(--gold)}
-.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
-.f-grid h4{color:#FFFDF7;font-family:'Suez One',serif;font-weight:400;margin-bottom:16px;font-size:1.02rem}
-.f-grid a{display:block;padding:4px 0;font-size:.92rem;transition:color .2s}
-.f-grid a:hover{color:var(--gold-lite)}
-.f-logo{font-family:'Suez One',serif;font-size:1.6rem;color:#FFFDF7}
-.f-logo small{display:block;font-family:'Heebo';font-weight:300;font-size:.78rem;letter-spacing:.26em;color:var(--gold-lite);margin-top:4px}
-.f-grid p{font-size:.9rem;font-weight:300;margin-top:14px;max-width:280px}
-.f-bot{border-top:1px solid #33291E;padding:18px 0;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer{background:#2A1410;color:#B59E8C;padding:60px 0 0}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
+.f-grid h4{color:#fff;font-family:'Assistant';font-weight:800;margin-bottom:16px;font-size:.95rem;letter-spacing:.08em}
+.f-grid a{display:block;padding:4px 0;font-size:.9rem;transition:color .2s}
+.f-grid a:hover{color:var(--cyan)}
+.f-logo{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.5rem;color:#fff}
+.f-logo small{display:block;font-family:'Assistant';font-weight:600;font-size:.68rem;letter-spacing:.3em;color:var(--cyan);margin-top:5px}
+.f-grid p{font-size:.88rem;margin-top:14px;max-width:280px}
+.f-bot{border-top:1px solid #47251E;padding:18px 0;font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media(max-width:860px){.f-grid{grid-template-columns:1fr 1fr}}
 
 .wa{position:fixed;bottom:24px;left:24px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .2s}
@@ -162,145 +157,150 @@ footer{background:var(--ink);color:#A99A7D;padding:64px 0 0;border-top:3px doubl
 </head>
 <body>
 
-<div class="topstrip">מחלקה עסקית לשפים, מסעדות וסיטונאות · משלוחים בתל אביב · <b>לוינסקי 36 · מאז 1958</b></div>
+<div class="topstrip">משלוחים חינם בתל אביב בהזמנה מעל 250 ₪ · מגשי אירוח עד 48 שעות מראש · לוינסקי 36</div>
 
 <header>
   <div class="wrap nav">
     <a class="logo" href="#">
       <svg class="roundel" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="47" fill="#A31026"/>
-        <circle cx="50" cy="50" r="42" fill="none" stroke="#E3C878" stroke-width="1.6"/>
-        <circle cx="50" cy="50" r="38" fill="none" stroke="#E3C878" stroke-width=".7" stroke-dasharray="2 3"/>
-        <text x="50" y="44" text-anchor="middle" fill="#FFFDF7" font-family="Suez One,serif" font-size="21">ח״ר</text>
-        <text x="50" y="63" text-anchor="middle" fill="#E3C878" font-family="Heebo,sans-serif" font-size="10.5" letter-spacing="1">1958</text>
-        <text x="50" y="80" text-anchor="middle" fill="#F6E7CB" font-family="Heebo,sans-serif" font-size="7" letter-spacing="1">לוינסקי 36</text>
+        <circle cx="50" cy="50" r="47" fill="#B5122E"/>
+        <circle cx="50" cy="50" r="41" fill="none" stroke="#fff" stroke-width="1.6"/>
+        <text x="50" y="44" text-anchor="middle" fill="#fff" font-family="Frank Ruhl Libre,serif" font-weight="900" font-size="21">ח״ר</text>
+        <text x="50" y="63" text-anchor="middle" fill="#F6B32B" font-family="Assistant,sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">1958</text>
+        <text x="50" y="80" text-anchor="middle" fill="#FBEFE7" font-family="Assistant,sans-serif" font-size="7" letter-spacing="1">לוינסקי 36</text>
       </svg>
       <span class="logo-txt">
         <span class="name">חיים רפאל</span>
-        <span class="tag">בית האוכל הבלקני · מאז 1958</span>
+        <span class="tag">טעם של סלוניקי · מאז 1958</span>
       </span>
     </a>
     <nav class="menu">
       <a href="shop.html">החנות</a>
-      <a href="#heritage">מסלוניקי ללוינסקי</a>
-      <a href="#b2b">לשפים ולמסעדות</a>
-      <a href="#deps">המחלקות</a>
+      <a href="story.html">הסיפור שלנו</a>
+      <a href="#partner">סיטונאות ושפים</a>
+      <a href="#testi">ממליצים</a>
+        <a href="faq.html">משלוחים ושאלות נפוצות</a>
       <a href="#visit">ביקור</a>
     </nav>
-    <a class="btn btn-red" href="shop.html">להזמנה אונליין</a>
+    <a class="btn btn-cyan" href="shop.html">להזמנה אונליין</a>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-frame"></div>
   <div class="hero-in">
-    <div class="est">EST · לוינסקי 36 · 1958</div>
-    <h1>בית האוכל <em>הבלקני</em><br>של ישראל</h1>
-    <p class="sub">מהדלפק בשוק לוינסקי אל המטבחים של השפים הגדולים בישראל: זיתים מהחבית, גבינות מיושנות, מליחים וטעמים של סלוניקי - כבר שלושה דורות.</p>
+    <span class="pre">לוינסקי 36 · תל אביב · מאז 1958</span>
+    <h1>טעם של סלוניקי.<br>בלב לוינסקי.</h1>
+    <p>זיתים מהחבית, פטה צאן, בורקאס חם ואוזו קר - מעדנייה משפחתית בדור שלישי, עם הטעמים שהגיעו מיוון ונשארו בבית.</p>
     <div class="hero-btns">
-      <a class="btn btn-red" href="shop.html">לחנות האונליין</a>
-      <a class="btn btn-outline-w" href="#b2b">מחלקה עסקית לשפים ומסעדות</a>
+      <a class="btn btn-yellow" href="shop.html">לחנות האונליין</a>
+      <a class="btn btn-white" href="#partner">לשפים ולמסעדות</a>
     </div>
   </div>
 </section>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-in">
-    <span>זיתים מהחבית</span><b>✦</b><span>גבינות מיושנות מכל העולם</span><b>✦</b><span>מליחים ודגים כבושים</span><b>✦</b><span>בורקאס וגבינות בלקניות</span><b>✦</b><span>יינות ואוזו יווני</span><b>✦</b><span>מגשי אירוח לשפים</span><b>✦</b><span>תבשילי בית ספרדיים</span><b>✦</b><span>זיתים מהחבית</span><b>✦</b><span>גבינות מיושנות מכל העולם</span><b>✦</b><span>מליחים ודגים כבושים</span><b>✦</b><span>בורקאס וגבינות בלקניות</span><b>✦</b><span>יינות ואוזו יווני</span><b>✦</b><span>מגשי אירוח לשפים</span><b>✦</b><span>תבשילי בית ספרדיים</span><b>✦</b>
-  </div>
-</div>
-
-<section class="sec heritage" id="heritage">
-  <div class="wrap her-grid">
-    <div class="her-img">
-      <img src="https://media.getmood.io/warehouse/dynamic/260365.jpg" alt="חיים רפאל - המעדניה בלוינסקי מאז 1958">
-    </div>
-    <div>
-      <span class="kicker">הסיפור שלנו</span>
-      <h2 style="font-size:clamp(1.9rem,3.4vw,2.7rem);margin:10px 0 26px">מסלוניקי ללוינסקי,<br>בעשר אצבעות</h2>
-      <ul class="tl">
-        <li><span class="yr">1924 · סלוניקי</span><p>חיים רפאל נולד בסלוניקי שביוון, בת מלכת הקהילות הספרדיות של הבלקן.</p></li>
-        <li><span class="yr">1958 · לוינסקי 36</span><p>חיים ואשתו אסתר, ילידת קורפו, פותחים מכולת קטנה בשוק לוינסקי - בעשר אצבעות, בצניעות ובחריצות.</p></li>
-        <li><span class="yr">הדור השני · צדיק</span><p>המכולת הקטנה הופכת למעדנייה מובילה: זיתים כבושים בבית, גבינות, מליחים ותבשילים של המטבח היהודי-ספרדי.</p></li>
-        <li><span class="yr">היום · חיים הנכד</span><p>הדור השלישי מאחורי אותו דלפק - עם חנות אונליין, מחלקה עסקית לשפים ומסעדות, ואותם טעמים בדיוק.</p></li>
-      </ul>
-      <div class="her-quote">"בעשר אצבעות, בצניעות רבה ובחריצות אופיינית - כך נבנה בית האוכל הבלקני בישראל."<small>מתוך סיפור המשפחה</small></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec b2b" id="b2b">
+<section class="story" id="story">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">המחלקה העסקית</span>
-      <h2>המעדנייה של המטבחים הגדולים</h2>
-      <p>המסעדות, השפים והסיטונאים המובילים בישראל עובדים איתנו יום-יום. מוצרים מיוחדים, כמויות מדויקות, ואספקה שאפשר לסמוך עליה.</p>
-      <div class="orn"><i>✦ ✦ ✦</i></div>
-    </div>
-    <div class="b2b-grid">
-      <div class="b2b-card">
-        <span class="num">— 01</span>
-        <h3>מסעדות ושפים</h3>
-        <p>מוצרי בוטיק שלא נמצאים אצל ספקים רגילים: גבינות מיושנות, מליחים, זיתים נדירים וחומרי גלם בלקניים למנות המיוחדות שלכם. התאמה אישית לכל מטבח.</p>
-      </div>
-      <div class="b2b-card">
-        <span class="num">— 02</span>
-        <h3>סיטונאות</h3>
-        <p>אספקה שוטפת בכמויות גדולות לרשתות, מעדניות ובתי מלון - במחירי סיטונאות, עם קו אספקה קבוע וזמין.</p>
-      </div>
-      <div class="b2b-card">
-        <span class="num">— 03</span>
-        <h3>אירועים ומגשי שף</h3>
-        <p>מגשי אירוח ברמת שף לכנסים, אירועי חברה וערבי יין - מורכבים ביום האירוע ומגיעים עד אליכם.</p>
-      </div>
-    </div>
-    <div class="b2b-cta">
-      <a class="btn btn-gold" href="https://wa.me/97236826147">דברו עם המחלקה העסקית</a>
-      <div class="note">מענה מהיר בוואטסאפ · 03-6826147</div>
-    </div>
+    <div class="tag-lbl"><i></i><span>מי אנחנו</span></div>
+    <h2>הסיפור שלנו</h2>
+    <p>ב-1958 פתחו חיים רפאל, יליד סלוניקי, ואסתר, ילידת קורפו, מכולת קטנה בשוק לוינסקי. היום, בדור השלישי, אנחנו עדיין בוחרים ביד כל גבינה, כל דג כבוש וכל זית - במסורת המטבח היהודי-ספרדי של הבלקן. <a href="story.html">גלו את הסיפור המלא ←</a></p>
   </div>
 </section>
 
-<section class="sec" id="deps">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">המחלקות שלנו</span>
-      <h2>מה תיקחו היום מהדלפק?</h2>
-      <p>כל מה שעל הדלפק בלוינסקי - זמין גם אונליין, לפודיז ולאוהבי הדליקטס.</p>
-      <div class="orn"><i>✦ ✦ ✦</i></div>
-    </div>
-    <div class="deps">
-      <a class="dep" href="shop.html"><img src="https://media.getmood.io/warehouse/dynamic/259806.jpg" alt="גבינות"><div class="ov"></div><div class="lbl"><h3>גבינות</h3><span>64 מוצרים</span></div></a>
-      <a class="dep" href="shop.html"><img src="https://media.getmood.io/warehouse/dynamic/264391.jpg" alt="דגים ומליחים"><div class="ov"></div><div class="lbl"><h3>דגים ומליחים</h3><span>26 מוצרים</span></div></a>
-      <a class="dep" href="shop.html"><img src="https://media.getmood.io/warehouse/dynamic/259871.jpg" alt="נקניקים"><div class="ov"></div><div class="lbl"><h3>נקניקים</h3><span>21 מוצרים</span></div></a>
-      <a class="dep" href="shop.html"><img src="https://media.getmood.io/warehouse/dynamic/318093.jpg" alt="סלטים וממרחים"><div class="ov"></div><div class="lbl"><h3>סלטים וממרחים</h3><span>58 מוצרים</span></div></a>
-      <a class="dep" href="shop.html"><img src="https://media.getmood.io/warehouse/dynamic/263137.jpeg" alt="מגשי אירוח"><div class="ov"></div><div class="lbl"><h3>מגשי אירוח</h3><span>17 מוצרים</span></div></a>
-      <a class="dep" href="shop.html"><img src="https://media.getmood.io/warehouse/dynamic/292901.jpg" alt="מזווה ויינות"><div class="ov"></div><div class="lbl"><h3>מזווה ויינות</h3><span>113 מוצרים</span></div></a>
-    </div>
-  </div>
-</section>
-
-<section class="foodies">
-  <h2>לפודיז, לאוהבי הדליקטס,<br>ולכל מי שיודע/ת ש<em>אוכל טוב מתחיל בחומר גלם</em></h2>
-  <p>כל מה שהשפים לוקחים מאיתנו למסעדות - זמין גם לכם. באותה איכות, מאותו דלפק.</p>
-  <a class="btn btn-outline-w" href="shop.html" style="border-color:#F6E7CB">לחנות האונליין ←</a>
-</section>
-
-<section class="sec visit" id="visit">
+<section class="band">
   <div class="wrap">
     <div>
-      <span class="kicker">בואו לבקר</span>
-      <h2>הדלפק מחכה בלוינסקי 36</h2>
-      <div class="vrow"><div class="ic">📍</div><div><b>לוינסקי 36, תל אביב</b><span>בלב שוק לוינסקי, פלורנטין</span></div></div>
-      <div class="vrow"><div class="ic">🕗</div><div><b>שעות פתיחה</b><span>א'-ה' 8:00-19:00 · ו' וערבי חג 7:30-15:00</span></div></div>
-      <div class="vrow"><div class="ic">📞</div><div><b>03-6826147</b><span>אפשר גם בוואטסאפ - עונים מהר</span></div></div>
-      <a class="btn btn-red" href="tel:036826147" style="margin-top:8px">התקשרו אלינו</a>
+      <div class="tag-lbl"><i></i><span>איכות מובטחת</span></div>
+      <h2>כל מוצר עובר קודם<br>את הטעימה שלנו</h2>
+      <p>מהזיתים שנכבשים אצלנו ועד הגבינות שמגיעות מיוון, מצרפת ומאיטליה - שום דבר לא עולה על הדלפק לפני שטעמנו ואישרנו. ככה זה כבר שלושה דורות.</p>
+      <a class="btn btn-white" href="shop.html">לכל המוצרים</a>
     </div>
-    <div class="addr-card">
-      <div class="big">לוינסקי 36</div>
-      <p>תל אביב · בלב שוק לוינסקי</p>
-      <a class="btn btn-gold" style="margin-top:22px" href="https://waze.com/ul?q=לוינסקי 36 תל אביב">ניווט ב-Waze ←</a>
+    <div class="band-img">
+      <img src="https://media.getmood.io/warehouse/dynamic/263146.jpeg" alt="מגש זיתים מהעולם">
     </div>
+  </div>
+</section>
+
+<section class="shop-sec">
+  <div class="wrap">
+    <div class="shop-head">
+      <div class="tag-lbl"><i></i><span>הזמנה אונליין</span></div>
+      <h2>מוצרים יווניים מובחרים</h2>
+      <p>הנמכרים ביותר מהפינה היוונית של הדלפק - טריים, אמיתיים, ישר מהמקור.</p>
+    </div>
+    <div class="prods">
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/263094.jpeg" alt="שמן זית מכרתים 5 ליטר"></a>
+        <div class="in"><h3>שמן זית מכרתים · פח 5 ליטר</h3><div class="pr">₪295</div><button class="add">הוספה לסל</button></div>
+      </div>
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/269850.jpg" alt="זיתי קלמטה פרימיום"></a>
+        <div class="in"><h3>זיתי קלמטה פרימיום בשמן זית</h3><div class="pr">₪50</div><button class="add">הוספה לסל</button></div>
+      </div>
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/263340.jpeg" alt="פטה צאן יוונית"></a>
+        <div class="in"><h3>פטה צאן יוונית מחלב עיזים</h3><div class="pr">₪13 <small style="font-size:.7rem;color:var(--grey)">ל-100 גרם</small></div><button class="add">הוספה לסל</button></div>
+      </div>
+      <div class="card">
+        <a class="ph" href="product.html"><img src="https://media.getmood.io/warehouse/dynamic/264748.jpg" alt="אוזו 7"></a>
+        <div class="in"><h3>אוזו 7</h3><div class="pr">₪63</div><button class="add">הוספה לסל</button></div>
+      </div>
+    </div>
+    <div class="more"><a class="btn btn-cyan" href="shop.html">לכל החנות ←</a></div>
+  </div>
+</section>
+
+<section class="eat">
+  <h2>תאכלו בלקני.<br>תחיו טוב.</h2>
+</section>
+
+<section class="partner" id="partner">
+  <div class="wrap">
+    <div class="partner-img">
+      <img src="https://media.getmood.io/warehouse/dynamic/651154.jpeg" alt="מגש סלמון ומטיאס">
+    </div>
+    <div class="partner-txt">
+      <div class="tag-lbl"><i></i><span>סיטונאות</span></div>
+      <h2>הצטרפו כשותפים<br>של חיים רפאל</h2>
+      <p>ספקו ללקוחות שלכם טעמים בלקניים אמיתיים. תוכנית הסיטונאות שלנו מבטיחה מוצרים באיכות גבוהה, במחירים תחרותיים, עם אספקה קבועה ומהירה - למסעדות, מעדניות, בתי מלון ורשתות.</p>
+      <p><b>נשמח לחלוק את המטבח שלנו איתכם ועם הלקוחות שלכם!</b></p>
+      <a class="btn btn-cyan" href="https://wa.me/97236826147">דברו איתנו עכשיו</a>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="testi">
+  <div class="wrap">
+    <div class="shop-head" style="margin-bottom:0">
+      <div class="tag-lbl"><i></i><span>לקוחות מרוצים</span></div>
+      <h2>אומרים עלינו</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card">
+        <p>אין שבת בלי הזיתים והבורקאס מלוינסקי. שלושה דורות אצלנו קונים משלושה דורות שלהם.</p>
+        <div class="who">לקוחה קבועה, תל אביב</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="t-card">
+        <p>הפטה והקשקבל שלהם על המנות שלנו כבר עשור. חומר גלם שאי אפשר למצוא בשום מקום אחר.</p>
+        <div class="who">שף, מסעדה בתל אביב</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="t-card">
+        <p>חיפשתי את שמן הזית מכרתים שטעמנו בחופשה - רק אצלם מצאתי. שירות, מלאי ומחיר מעולים.</p>
+        <div class="who">לקוח מהצפון</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="tag-lbl"><i></i><span style="color:#E7A9A2">בואו לבקר</span></div>
+  <h2>לוינסקי 36, תל אביב</h2>
+  <p>א'-ה' 8:00-19:00 · ו' וערבי חג 7:30-15:00 · 03-6826147</p>
+  <div class="row">
+    <a class="btn btn-cyan" href="tel:036826147">להתקשר</a>
+    <a class="btn btn-yellow" href="https://waze.com/ul?q=לוינסקי 36 תל אביב">ניווט ב-Waze</a>
   </div>
 </section>
 
@@ -308,32 +308,33 @@ footer{background:var(--ink);color:#A99A7D;padding:64px 0 0;border-top:3px doubl
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <div class="f-logo">חיים רפאל<small>בית האוכל הבלקני · מאז 1958</small></div>
-        <p>מעדנייה משפחתית בדור שלישי בלב שוק לוינסקי. ספקים של השפים, המסעדות והפודיז של ישראל.</p>
+        <div class="f-logo">חיים רפאל<small>טעם של סלוניקי · מאז 1958</small></div>
+        <p>מעדנייה משפחתית בדור שלישי בלב שוק לוינסקי - בית האוכל הבלקני בישראל.</p>
       </div>
       <div>
         <h4>החנות</h4>
         <a href="shop.html">כל המוצרים</a>
-        <a href="shop.html">גבינות</a>
+        <a href="shop.html">הפינה היוונית</a>
         <a href="shop.html">מגשי אירוח</a>
-        <a href="shop.html">יינות ואלכוהול</a>
+        <a href="product.html">מגש הגבינות שלנו</a>
       </div>
       <div>
-        <h4>עסקי</h4>
-        <a href="#b2b">מסעדות ושפים</a>
-        <a href="#b2b">סיטונאות</a>
-        <a href="#b2b">אירועים</a>
+        <h4>מידע</h4>
+        <a href="story.html">הסיפור שלנו</a>
+        <a href="#partner">סיטונאות ושותפים</a>
+        <a href="#testi">ממליצים</a>
+        <a href="faq.html">משלוחים ושאלות נפוצות</a>
       </div>
       <div>
-        <h4>יצירת קשר</h4>
+        <h4>קשר</h4>
         <a href="tel:036826147">03-6826147</a>
         <a href="#visit">לוינסקי 36, תל אביב</a>
         <a href="https://wa.me/97236826147">וואטסאפ</a>
       </div>
     </div>
     <div class="f-bot">
-      <span>© חיים רפאל - בית האוכל הבלקני בישראל. כל הזכויות שמורות.</span>
-      <span>הדמיית עיצוב - הצעה לשדרוג האתר</span>
+      <span>© חיים רפאל. כל הזכויות שמורות.</span>
+      <span>הדמיית עיצוב - הצעה לשדרוג האתר · הציטוטים להדגמה בלבד</span>
     </div>
   </div>
 </footer>

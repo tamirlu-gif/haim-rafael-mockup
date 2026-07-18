@@ -8,9 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cyan:#2BC0E4; --cyan-deep:#0FA0C4; --cyan-pale:#E6F8FD;
+  --cyan:#B5122E; --cyan-deep:#8E0E24; --cyan-pale:#FBEFE7;
   --yellow:#F6B32B; --yellow-deep:#E09E12;
-  --navy:#1F3B73; --ink:#243040; --grey:#66718A; --white:#FFFFFF;
+  --navy:#4A1520; --ink:#2B221C; --grey:#6E5F52; --white:#FFFFFF;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -29,7 +29,7 @@ h1,h2,h3{font-family:'Frank Ruhl Libre',serif;color:var(--navy)}
 .topstrip{background:var(--cyan);color:#fff;font-size:.8rem;text-align:center;padding:8px 12px;font-weight:600;letter-spacing:.06em}
 
 /* ── Header ── */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(31,59,115,.08)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 18px rgba(43,20,15,.09)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:24px}
 .logo{display:flex;align-items:center;gap:12px}
 .roundel{width:50px;height:50px;flex-shrink:0}
@@ -40,7 +40,7 @@ nav.menu{display:flex;gap:26px;font-weight:600;font-size:.9rem;color:var(--ink)}
 nav.menu a{padding:5px 0;transition:color .2s}
 nav.menu a:hover{color:var(--cyan-deep)}
 .btn{display:inline-block;padding:13px 30px;border-radius:99px;font-weight:700;font-size:.88rem;transition:all .2s;cursor:pointer;border:none;letter-spacing:.06em}
-.btn-cyan{background:var(--cyan);color:#fff;box-shadow:0 6px 18px rgba(43,192,228,.4)}
+.btn-cyan{background:var(--cyan);color:#fff;box-shadow:0 6px 18px rgba(181,18,46,.35)}
 .btn-cyan:hover{background:var(--cyan-deep);transform:translateY(-2px)}
 .btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 6px 18px rgba(246,179,43,.4)}
 .btn-yellow:hover{background:var(--yellow-deep);transform:translateY(-2px)}
@@ -51,11 +51,11 @@ nav.menu a:hover{color:var(--cyan-deep)}
 /* ── Hero ── */
 .hero{position:relative;min-height:78vh;display:grid;place-items:center;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/263146.jpeg') center/cover;filter:brightness(.48) saturate(1.1)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,120,150,.35),rgba(20,40,80,.62))}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(120,20,35,.35),rgba(35,12,12,.62))}
 .hero-in{position:relative;z-index:2;text-align:center;color:#fff;padding:90px 24px;max-width:840px}
 .hero .pre{letter-spacing:.4em;font-size:.8rem;font-weight:700;color:#FFE9B8;margin-bottom:20px;display:block}
 .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.15;color:#fff;font-weight:900;text-shadow:0 4px 26px rgba(0,20,40,.4)}
-.hero p{font-size:clamp(1rem,2vw,1.25rem);margin:22px auto 36px;max-width:560px;color:#EAF7FC;font-weight:400}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);margin:22px auto 36px;max-width:560px;color:#F7EDE4;font-weight:400}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .hero .btn{padding:15px 40px;font-size:1rem}
 @media(prefers-reduced-motion:no-preference){
@@ -76,9 +76,9 @@ nav.menu a:hover{color:var(--cyan-deep)}
 .band .tag-lbl span{color:#fff}
 .band .tag-lbl i{background:var(--yellow)}
 .band h2{color:#fff;font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:900;line-height:1.25;margin-bottom:16px}
-.band p{color:#E8FAFF;font-size:1.02rem;margin-bottom:30px;max-width:460px}
+.band p{color:#F9E9E0;font-size:1.02rem;margin-bottom:30px;max-width:460px}
 .band-img{position:relative}
-.band-img img{border-radius:14px;box-shadow:0 26px 60px rgba(9,60,80,.4);transform:rotate(1.5deg)}
+.band-img img{border-radius:14px;box-shadow:0 26px 60px rgba(60,10,18,.4);transform:rotate(1.5deg)}
 .band-img::after{content:"מאז 1958";position:absolute;top:-18px;right:-12px;background:var(--yellow);color:var(--navy);font-weight:800;font-size:.9rem;padding:10px 24px;border-radius:99px;box-shadow:0 8px 22px rgba(0,0,0,.25)}
 @media(max-width:880px){.band .wrap{grid-template-columns:1fr;gap:48px}}
 
@@ -88,8 +88,8 @@ nav.menu a:hover{color:var(--cyan-deep)}
 .shop-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:900}
 .shop-head p{color:var(--grey);margin-top:12px}
 .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(31,59,115,.1);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;text-align:center}
-.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(31,59,115,.18)}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(43,20,15,.12);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;text-align:center}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(43,20,15,.2)}
 .card .ph{aspect-ratio:1/0.9;overflow:hidden;background:var(--cyan-pale)}
 .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
 .card:hover .ph img{transform:scale(1.06)}
@@ -133,13 +133,13 @@ nav.menu a:hover{color:var(--cyan-deep)}
 @media(max-width:860px){.testi-grid{grid-template-columns:1fr}}
 
 /* ── Visit ── */
-.visit{background:var(--navy);color:#D9E2F5;text-align:center;padding:88px 24px}
+.visit{background:var(--navy);color:#EFDCD2;text-align:center;padding:88px 24px}
 .visit h2{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900}
-.visit p{margin:14px auto 34px;max-width:460px;color:#B9C7E4}
+.visit p{margin:14px auto 34px;max-width:460px;color:#D3B6A8}
 .visit .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 /* ── Footer ── */
-footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
+footer{background:#2A1410;color:#B59E8C;padding:60px 0 0}
 .f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
 .f-grid h4{color:#fff;font-family:'Assistant';font-weight:800;margin-bottom:16px;font-size:.95rem;letter-spacing:.08em}
 .f-grid a{display:block;padding:4px 0;font-size:.9rem;transition:color .2s}
@@ -147,7 +147,7 @@ footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
 .f-logo{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.5rem;color:#fff}
 .f-logo small{display:block;font-family:'Assistant';font-weight:600;font-size:.68rem;letter-spacing:.3em;color:var(--cyan);margin-top:5px}
 .f-grid p{font-size:.88rem;margin-top:14px;max-width:280px}
-.f-bot{border-top:1px solid #24396B;padding:18px 0;font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.f-bot{border-top:1px solid #47251E;padding:18px 0;font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media(max-width:860px){.f-grid{grid-template-columns:1fr 1fr}}
 
 .wa{position:fixed;bottom:24px;left:24px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .2s}
@@ -163,11 +163,11 @@ footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
   <div class="wrap nav">
     <a class="logo" href="#">
       <svg class="roundel" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="47" fill="#2BC0E4"/>
+        <circle cx="50" cy="50" r="47" fill="#B5122E"/>
         <circle cx="50" cy="50" r="41" fill="none" stroke="#fff" stroke-width="1.6"/>
         <text x="50" y="44" text-anchor="middle" fill="#fff" font-family="Frank Ruhl Libre,serif" font-weight="900" font-size="21">ח״ר</text>
-        <text x="50" y="63" text-anchor="middle" fill="#FFE9B8" font-family="Assistant,sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">1958</text>
-        <text x="50" y="80" text-anchor="middle" fill="#E6F8FD" font-family="Assistant,sans-serif" font-size="7" letter-spacing="1">לוינסקי 36</text>
+        <text x="50" y="63" text-anchor="middle" fill="#F6B32B" font-family="Assistant,sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">1958</text>
+        <text x="50" y="80" text-anchor="middle" fill="#FBEFE7" font-family="Assistant,sans-serif" font-size="7" letter-spacing="1">לוינסקי 36</text>
       </svg>
       <span class="logo-txt">
         <span class="name">חיים רפאל</span>
@@ -176,9 +176,10 @@ footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
     </a>
     <nav class="menu">
       <a href="shop.html">החנות</a>
-      <a href="#story">הסיפור שלנו</a>
+      <a href="story.html">הסיפור שלנו</a>
       <a href="#partner">סיטונאות ושפים</a>
       <a href="#testi">ממליצים</a>
+        <a href="faq.html">משלוחים ושאלות נפוצות</a>
       <a href="#visit">ביקור</a>
     </nav>
     <a class="btn btn-cyan" href="shop.html">להזמנה אונליין</a>
@@ -201,7 +202,7 @@ footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
   <div class="wrap">
     <div class="tag-lbl"><i></i><span>מי אנחנו</span></div>
     <h2>הסיפור שלנו</h2>
-    <p>ב-1958 פתחו חיים רפאל, יליד סלוניקי, ואסתר, ילידת קורפו, מכולת קטנה בשוק לוינסקי. היום, בדור השלישי, אנחנו עדיין בוחרים ביד כל גבינה, כל דג כבוש וכל זית - במסורת המטבח היהודי-ספרדי של הבלקן. <a href="#partner">גלו את הסיפור המלא ←</a></p>
+    <p>ב-1958 פתחו חיים רפאל, יליד סלוניקי, ואסתר, ילידת קורפו, מכולת קטנה בשוק לוינסקי. היום, בדור השלישי, אנחנו עדיין בוחרים ביד כל גבינה, כל דג כבוש וכל זית - במסורת המטבח היהודי-ספרדי של הבלקן. <a href="story.html">גלו את הסיפור המלא ←</a></p>
   </div>
 </section>
 
@@ -294,7 +295,7 @@ footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
 </section>
 
 <section class="visit" id="visit">
-  <div class="tag-lbl"><i></i><span style="color:#8FD8EC">בואו לבקר</span></div>
+  <div class="tag-lbl"><i></i><span style="color:#E7A9A2">בואו לבקר</span></div>
   <h2>לוינסקי 36, תל אביב</h2>
   <p>א'-ה' 8:00-19:00 · ו' וערבי חג 7:30-15:00 · 03-6826147</p>
   <div class="row">
@@ -319,9 +320,10 @@ footer{background:#16294F;color:#93A3C6;padding:60px 0 0}
       </div>
       <div>
         <h4>מידע</h4>
-        <a href="#story">הסיפור שלנו</a>
+        <a href="story.html">הסיפור שלנו</a>
         <a href="#partner">סיטונאות ושותפים</a>
         <a href="#testi">ממליצים</a>
+        <a href="faq.html">משלוחים ושאלות נפוצות</a>
       </div>
       <div>
         <h4>קשר</h4>

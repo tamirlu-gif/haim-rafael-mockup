@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הסיפור שלנו - חיים רפאל - המעדניה בלוינסקי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#A31026; --red-deep:#7E0C1E; --cream:#F7F1E3; --paper:#EFE6D2;
+  --ink:#191512; --ink-soft:#5E5548; --gold:#B98A2F; --gold-lite:#E3C878;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Suez One',serif;font-weight:400}
+
+.topstrip{background:var(--red);color:#F6E7CB;font-size:.82rem;text-align:center;padding:8px 12px}
+.topstrip b{color:var(--gold-lite);font-weight:600}
+header{position:sticky;top:0;z-index:50;background:rgba(247,241,227,.96);backdrop-filter:blur(10px);border-bottom:3px double rgba(25,21,18,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:24px}
+.logo{line-height:1.05}
+.logo .name{font-family:'Suez One',serif;font-size:1.5rem;color:var(--red);display:block}
+.logo .tag{font-size:.64rem;letter-spacing:.3em;color:var(--ink-soft)}
+nav.menu{display:flex;gap:26px;font-weight:500;font-size:.93rem}
+nav.menu a:hover{color:var(--red)}
+.btn{display:inline-block;padding:12px 28px;font-weight:600;font-size:.95rem;transition:all .2s;cursor:pointer;border:none;background:var(--red);color:#FFFDF7;box-shadow:0 2px 0 var(--red-deep)}
+.btn:hover{background:var(--red-deep)}
+@media(max-width:900px){nav.menu{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:46vh;display:grid;place-items:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://media.getmood.io/warehouse/dynamic/262766.jpg') center/cover;filter:brightness(.45) sepia(.2)}
+.hero-in{position:relative;z-index:2;text-align:center;color:#fff;padding:80px 24px}
+.hero .kicker{color:var(--gold-lite);letter-spacing:.4em;font-size:.78rem;font-weight:700;display:block;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,4.6vw,3.4rem);text-shadow:0 4px 26px rgba(0,0,0,.5)}
+
+/* article */
+.article{padding:80px 0 40px;max-width:760px;margin:0 auto}
+.article p{margin-bottom:22px;font-size:1.06rem;color:#3A332B}
+.article p.lead{font-family:'Frank Ruhl Libre',serif;font-size:1.3rem;color:var(--ink);font-weight:500}
+.article .quote{font-family:'Frank Ruhl Libre',serif;font-size:1.25rem;color:var(--red);border-right:3px solid var(--gold);padding-right:20px;margin:34px 0;font-weight:500;line-height:1.6}
+.src-note{font-size:.8rem;color:var(--ink-soft);border-top:1px solid rgba(25,21,18,.12);padding-top:14px;margin-top:10px}
+
+/* timeline strip */
+.tl-strip{background:var(--ink);color:#EFE3CB;padding:70px 0}
+.tl-strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.tl-strip .yr{font-family:'Suez One',serif;color:var(--gold-lite);font-size:1.7rem;display:block;margin-bottom:8px}
+.tl-strip p{font-size:.9rem;color:#C9BB9E}
+@media(max-width:860px){.tl-strip .wrap{grid-template-columns:repeat(2,1fr)}}
+
+/* gallery */
+.gal-sec{padding:90px 0}
+.gal-head{text-align:center;margin-bottom:48px}
+.gal-head .kicker{color:var(--red);font-weight:700;letter-spacing:.3em;font-size:.75rem}
+.gal-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin-top:10px}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal a{overflow:hidden;border:6px solid #fff;box-shadow:0 8px 24px rgba(25,21,18,.14);display:block}
+.gal img{aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .45s}
+.gal a:hover img{transform:scale(1.07)}
+.gal a:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal a:nth-child(1) img{aspect-ratio:auto;height:100%}
+@media(max-width:760px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+.cta-strip{background:var(--red);color:#fff;text-align:center;padding:64px 24px}
+.cta-strip h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:24px}
+.btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 2px 0 #8F6A22}
+
+footer{background:var(--ink);color:#A99A7D;padding:26px 0;text-align:center;font-size:.85rem;border-top:3px double var(--gold)}
+footer b{color:var(--gold-lite)}
+.note{margin-top:6px;font-size:.76rem;opacity:.7}
+</style>
+</head>
+<body>
+
+<div class="topstrip">משלוחים בתל אביב והסביבה · <b>לוינסקי 36 · מאז 1958</b> · 03-6826147</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="greek.html">
+      <span class="name">חיים רפאל</span>
+      <span class="tag">בית האוכל הבלקני · מאז 1958</span>
+    </a>
+    <nav class="menu">
+      <a href="shop.html">החנות</a>
+      <a href="story.html" style="color:var(--red)">הסיפור שלנו</a>
+      <a href="faq.html">משלוחים ושאלות</a>
+      <a href="greek.html#partner">לשפים ולמסעדות</a>
+    </nav>
+    <a class="btn" href="shop.html">להזמנה אונליין</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <span class="kicker">מאז 1958 · לוינסקי 36</span>
+    <h1>הסיפור שלנו</h1>
+  </div>
+</section>
+
+<article class="article wrap">
+  <p class="lead">יותר משישים שנה פועלת בלב תל אביב הישנה, במתחם הצבעוני והמזמין של רחוב לוינסקי, "חיים רפאל המעדנייה בלוינסקי" - מוסד קולינרי מוביל בתחומו, שקנה לו מוניטין והפך מודל לחיקוי.</p>
+
+  <p>"חיים רפאל המעדנייה בלוינסקי" החלה דרכה כחנות מכולת, שהקימו זוג ניצולי שואה ילידי יוון - חיים רפאל יליד סלוניקי ורעייתו אסתר ילידת קורפו. בעשר אצבעות, בצניעות גדולה ובחריצות טיפוסית הם ביקשו "להביא פרנסה", לגדל את ילדיהם, לאחד את משפחתם הקטנה ולטפחה. הם צלחו במשימתם, ולימים החנות הקטנה הפכה לעסק מוביל בתחומו.</p>
+
+  <div class="quote">שושלת תלת-דורית עומדת מאחורי המעדנייה - הסבא ז"ל (חיים), הבן (צדיק) והנכד (חיים). הם האנשים שעושים את המקום למעניין, למיוחד ולאנושי כל כך.</div>
+
+  <p>ב"חיים רפאל המעדנייה בלוינסקי" מבינים באנשים ובטעמים. המעדנייה ששמה יצא למרחקים מציעה את פריטי החובה של השולחן היהודי-ספרדי דובר הלאדינו, היוונית, הטורקית והבולגרית: מבחר ענק של זיתים, חמוצים ומחמצים, היצע מפתה של גבינות, מליחים, סלטים וממרחים - לצד תבשילי בית איכותיים ומבחר מרשים של יינות ומשקאות חריפים.</p>
+
+  <p>כל אלה עושים את "חיים רפאל המעדנייה בלוינסקי" ל<b>בית של האוכל הבלקני בישראל</b>.</p>
+
+  <div class="src-note">הטקסט מבוסס על עמוד "הסיפור שלנו" באתר הרשמי של המעדנייה.</div>
+</article>
+
+<section class="tl-strip">
+  <div class="wrap">
+    <div><span class="yr">1924</span><p>חיים רפאל נולד בסלוניקי, יוון</p></div>
+    <div><span class="yr">1958</span><p>חיים ואסתר פותחים את המכולת בלוינסקי 36</p></div>
+    <div><span class="yr">דור 2</span><p>צדיק הופך את המכולת למעדנייה מובילה</p></div>
+    <div><span class="yr">היום</span><p>חיים הנכד - דור שלישי מאחורי אותו דלפק</p></div>
+  </div>
+</section>
+
+<section class="gal-sec">
+  <div class="wrap">
+    <div class="gal-head">
+      <span class="kicker">מבט אל הדלפק</span>
+      <h2>החנות, כמו שהיא</h2>
+    </div>
+    <div class="gal">
+      <a href="https://media.getmood.io/warehouse/dynamic/262766.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262766.jpg" alt="המעדנייה בלוינסקי"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262805.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262805.jpg" alt="הדלפק"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262804.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262804.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262803.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262803.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262802.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262802.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262801.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262801.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262800.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262800.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262799.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262799.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262798.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262798.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262797.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262797.jpg" alt="מהחנות"></a>
+      <a href="https://media.getmood.io/warehouse/dynamic/262796.jpg"><img src="https://media.getmood.io/warehouse/dynamic/262796.jpg" alt="מהחנות"></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <h2>רוצים לטעום את הסיפור?</h2>
+  <a class="btn btn-gold" href="shop.html">לחנות האונליין ←</a>
+</section>
+
+<footer>
+  <div>חיים רפאל · בית האוכל הבלקני · <b>מאז 1958</b> · לוינסקי 36, תל אביב</div>
+  <div class="note">הדמיית עיצוב - הצעה לשדרוג האתר · התמונות והטקסט מהאתר הרשמי</div>
+</footer>
+
+</body>
+</html>
